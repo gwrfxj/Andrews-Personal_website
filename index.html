@@ -25,6 +25,9 @@
             line-height: 1.6;
             color: var(--dark);
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa; /* Fallback color to prevent white borders */
         }
         
         /* Navigation */
@@ -119,8 +122,50 @@
         /* Sections */
         section {
             padding: 5rem 2rem;
+            width: 100%;
+        }
+        
+        .section-content {
             max-width: 1200px;
             margin: 0 auto;
+        }
+        
+        /* Alternating section backgrounds */
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        section:nth-child(odd) {
+            background: white;
+        }
+        
+        /* Keep hero, fitness, and contact sections with their custom backgrounds */
+        .hero {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+        }
+        
+        #fitness {
+            background: #f8f9fa !important;
+        }
+        
+        #hobbies {
+            background: white !important;
+        }
+        
+        #work {
+            background: #f8f9fa !important;
+        }
+        
+        #certifications {
+            background: white !important;
+        }
+        
+        #publications {
+            background: #f8f9fa !important;
+        }
+        
+        .contact {
+            background: var(--dark) !important;
         }
         
         .section-title {
@@ -195,9 +240,6 @@
         }
         
         /* Fitness Section */
-        .fitness-section {
-            background: #f8f9fa;
-        }
         
         .fitness-gallery {
             display: grid;
@@ -391,6 +433,7 @@
             <li><a href="#fitness">Fitness</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#work">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -400,170 +443,178 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Andrew Gui</h1>
-            <p class="tagline">ECE Student • Researcher • Fitness Enthusiast</p>
+            <p class="tagline">ECE Student • Fitness Enthusiast • Watersports Lover</p>
             <div class="badges">
                 <span class="badge">⚡ UW Seattle ECE</span>
                 <span class="badge">🔬 Electrical Engineer at PNNL</span>
                 <span class="badge">💪 Gym Warrior</span>
-                <span class="badge">🚤 Watercraft Enthusiast</span>
+                <span class="badge">🏄 Watersports Enthusiast</span>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="profile-img-container">
-                <!-- Replace src with your actual image -->
-                <div class="profile-img img-placeholder">
-                    Add Your Profile Picture Here<br>
-                    (Professional headshot or casual photo)
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="profile-img-container">
+                    <!-- Replace src with your actual image -->
+                    <div class="profile-img img-placeholder">
+                        Add Your Profile Picture Here<br>
+                        (Professional headshot or casual photo)
+                    </div>
                 </div>
-            </div>
-            <div class="about-text">
-                <p>Hey! I'm Andrew, a passionate ECE student at the University of Washington with a unique blend of technical expertise and personal interests. From optimizing LLM hardware architectures to crushing personal records at the gym, I bring the same intensity and dedication to everything I do.</p>
-                <br>
-                <p>As a valedictorian who graduated high school a year early with a perfect 4.0 GPA, I've always pushed boundaries. Now at UW, I'm continuing that journey with a 3.71 GPA while conducting cutting-edge research at Pacific Northwest National Laboratory.</p>
-                <br>
-                <p>But I'm not just about academics - I believe in building both mind and body. You'll find me in the gym as often as in the lab, and yes, I've worked at McDonald's too - every experience teaches valuable lessons!</p>
+                <div class="about-text">
+                    <p>Hey! I'm Andrew, a passionate ECE student at the University of Washington with a unique blend of technical expertise and personal interests. From optimizing LLM hardware architectures to crushing personal records at the gym, I bring the same intensity and dedication to everything I do.</p>
+                    <br>
+                    <p>As a valedictorian who graduated high school a year early with a perfect 4.0 GPA, I've always pushed boundaries. Now at UW, I'm continuing that journey with a 3.71 GPA while conducting cutting-edge research at Pacific Northwest National Laboratory, focusing on Machine Learning and Logarithmic Number System implementations.</p>
+                    <br>
+                    <p>But I'm not just about academics - I believe in building both mind and body. You'll find me in the gym as often as in the lab, out on the water jet skiing on weekends, and yes, I've worked everything from McDonald's to Christmas lights - every experience teaches valuable lessons!</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- STEM/Research Section -->
     <section id="stem">
-        <h2 class="section-title">Research & STEM Journey</h2>
-        
-        <div class="research-card">
-            <h3>🔬 Current Research: Sensorfish Technology at PNNL</h3>
-            <p>Working as an Undergraduate Technical Intern in Electrical Engineering, I analyze autonomous sensor data to characterize fish passage conditions through dams. This involves field testing, calibration, and developing Python/Tkinter analysis programs.</p>
-            <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Tkinter</span>
-                <span class="tech-badge">Data Analysis</span>
-                <span class="tech-badge">Hardware Testing</span>
+        <div class="section-content">
+            <h2 class="section-title">Research & STEM Journey</h2>
+            
+            <div class="research-card">
+                <h3>🔬 Current Research: Sensorfish Technology at PNNL</h3>
+                <p>Working as an Undergraduate Technical Intern in Electrical Engineering, I analyze autonomous sensor data to characterize fish passage conditions through dams. This involves field testing, calibration, and developing Python/Tkinter analysis programs.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Tkinter</span>
+                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">Hardware Testing</span>
+                </div>
             </div>
-        </div>
 
-        <div class="research-card">
-            <h3>💻 High-Performance Computing & AI Hardware</h3>
-            <p>Co-authored research on optimizing Large Language Models using Logarithmic Number System (LNS) implementations. This work involved comparative analysis of LNS vs. Floating Point systems, contributing to cutting-edge AI hardware architecture design.</p>
-            <div class="tech-stack">
-                <span class="tech-badge">LLMs</span>
-                <span class="tech-badge">HPC</span>
-                <span class="tech-badge">Machine Learning</span>
-                <span class="tech-badge">Architecture Codesign</span>
+            <div class="research-card">
+                <h3>💻 High-Performance Computing & AI Hardware</h3>
+                <p>Co-authored research on optimizing Large Language Models using Logarithmic Number System (LNS) implementations. This work involved comparative analysis of LNS vs. Floating Point systems, contributing to cutting-edge AI hardware architecture design.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">HPC</span>
+                    <span class="tech-badge">Machine Learning</span>
+                    <span class="tech-badge">Architecture Codesign</span>
+                </div>
             </div>
-        </div>
 
-        <!-- Add images of you in the lab, at conferences, etc. -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem;">
-            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
-                Add Lab Photo Here
-            </div>
-            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
-                Add Conference/Presentation Photo
-            </div>
-            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
-                Add Research Team Photo
+            <!-- Add images of you in the lab, at conferences, etc. -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                    Add Lab Photo Here
+                </div>
+                <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                    Add Conference/Presentation Photo
+                </div>
+                <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                    Add Research Team Photo
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Fitness Section -->
-    <section id="fitness" class="fitness-section">
-        <h2 class="section-title">Fitness Journey 💪</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">Building strength in body and mind - my transformation and dedication to fitness</p>
-        
-        <div class="fitness-gallery">
-            <div class="fitness-card">
-                <div class="fitness-img img-placeholder">
-                    Add Progress Photo 1<br>
-                    (Beginning of journey)
+    <section id="fitness">
+        <div class="section-content">
+            <h2 class="section-title">Fitness Journey 💪</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Building strength in body and mind - my transformation and dedication to fitness</p>
+            
+            <div class="fitness-gallery">
+                <div class="fitness-card">
+                    <div class="fitness-img img-placeholder">
+                        Add Progress Photo 1<br>
+                        (Beginning of journey)
+                    </div>
+                    <div class="fitness-card-content">
+                        <h3>The Beginning</h3>
+                        <p>Where it all started - deciding to transform my life through fitness</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="fitness-card-content">
-                    <h3>The Beginning</h3>
-                    <p>Where it all started - deciding to transform my life through fitness</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 30%;"></div>
+
+                <div class="fitness-card">
+                    <div class="fitness-img img-placeholder">
+                        Add Progress Photo 2<br>
+                        (Mid-journey)
+                    </div>
+                    <div class="fitness-card-content">
+                        <h3>Building Momentum</h3>
+                        <p>Consistency paying off - seeing real changes and getting stronger</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fitness-card">
+                    <div class="fitness-img img-placeholder">
+                        Add Current Photo<br>
+                        (Recent gym photo)
+                    </div>
+                    <div class="fitness-card-content">
+                        <h3>Current Status</h3>
+                        <p>Stronger than ever - fitness is now a lifestyle, not just a goal</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fitness-card">
+                    <div class="fitness-img img-placeholder">
+                        Add Gym Photo<br>
+                        (Action shot or pose)
+                    </div>
+                    <div class="fitness-card-content">
+                        <h3>Daily Grind</h3>
+                        <p>Every day is an opportunity to become better than yesterday</p>
                     </div>
                 </div>
             </div>
 
-            <div class="fitness-card">
-                <div class="fitness-img img-placeholder">
-                    Add Progress Photo 2<br>
-                    (Mid-journey)
-                </div>
-                <div class="fitness-card-content">
-                    <h3>Building Momentum</h3>
-                    <p>Consistency paying off - seeing real changes and getting stronger</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%;"></div>
-                    </div>
-                </div>
+            <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">My Fitness Philosophy</h3>
+                <p>The same discipline that drives my academic success fuels my fitness journey. Whether it's debugging code or pushing through that last rep, it's all about persistence, consistency, and constantly challenging yourself to grow.</p>
             </div>
-
-            <div class="fitness-card">
-                <div class="fitness-img img-placeholder">
-                    Add Current Photo<br>
-                    (Recent gym photo)
-                </div>
-                <div class="fitness-card-content">
-                    <h3>Current Status</h3>
-                    <p>Stronger than ever - fitness is now a lifestyle, not just a goal</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="fitness-card">
-                <div class="fitness-img img-placeholder">
-                    Add Gym Photo<br>
-                    (Action shot or pose)
-                </div>
-                <div class="fitness-card-content">
-                    <h3>Daily Grind</h3>
-                    <p>Every day is an opportunity to become better than yesterday</p>
-                </div>
-            </div>
-        </div>
-
-        <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-            <h3 style="color: var(--primary); margin-bottom: 1rem;">My Fitness Philosophy</h3>
-            <p>The same discipline that drives my academic success fuels my fitness journey. Whether it's debugging code or pushing through that last rep, it's all about persistence, consistency, and constantly challenging yourself to grow.</p>
         </div>
     </section>
 
     <!-- Hobbies Section -->
     <section id="hobbies">
-        <h2 class="section-title">Hobbies & Adventures 🚤</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">Life's not all work and gym - I love getting out on the water!</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div class="research-card" style="background: linear-gradient(135deg, #00d4ff 0%, #0066cc 100%);">
-                <h3>🚤 Jet Skiing</h3>
-                <p>Nothing beats the rush of flying across the water on a jet ski. It's my favorite way to unwind and get that adrenaline pumping!</p>
-                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
-                    Add Jet Ski Photo Here
-                </div>
-            </div>
+        <div class="section-content">
+            <h2 class="section-title">Hobbies & Adventures 🚤</h2>
+            <p style="text-align: center; margin-bottom: 3rem;">Life's not all work and gym - I love getting out on the water!</p>
             
-            <div class="research-card" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
-                <h3>🏄 Watercraft Activities</h3>
-                <p>From wakeboarding to tubing, if it involves water and speed, I'm all in. The Pacific Northwest has amazing spots for water sports!</p>
-                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
-                    Add Water Activity Photo Here
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="research-card" style="background: linear-gradient(135deg, #00d4ff 0%, #0066cc 100%);">
+                    <h3>🚤 Jet Skiing</h3>
+                    <p>Nothing beats the rush of flying across the water on a jet ski. It's my favorite way to unwind and get that adrenaline pumping!</p>
+                    <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                        Add Jet Ski Photo Here
+                    </div>
                 </div>
-            </div>
-            
-            <div class="research-card" style="background: linear-gradient(135deg, #48cae4 0%, #00a8cc 100%);">
-                <h3>🌊 Lake Days</h3>
-                <p>Weekend trips to the lake with friends, bringing the jet skis out, and just enjoying life. Balance is everything!</p>
-                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
-                    Add Lake Day Photo Here
+                
+                <div class="research-card" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
+                    <h3>🏄 Watercraft Activities</h3>
+                    <p>From wakeboarding to tubing, if it involves water and speed, I'm all in. The Pacific Northwest has amazing spots for water sports!</p>
+                    <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                        Add Water Activity Photo Here
+                    </div>
+                </div>
+                
+                <div class="research-card" style="background: linear-gradient(135deg, #48cae4 0%, #00a8cc 100%);">
+                    <h3>🌊 Lake Days</h3>
+                    <p>Weekend trips to the lake with friends, bringing the jet skis out, and just enjoying life. Balance is everything!</p>
+                    <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                        Add Lake Day Photo Here
+                    </div>
                 </div>
             </div>
         </div>
@@ -571,37 +622,86 @@
 
     <!-- Work Experience -->
     <section id="work">
-        <h2 class="section-title">Work Experience</h2>
-        
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="work-card">
-                    <h3>Undergraduate Technical Intern - PNNL</h3>
-                    <p class="work-date">June 2024 - Present</p>
-                    <p>Leading research on Sensorfish technology, analyzing data to improve hydroelectric infrastructure's environmental impact. Developing Python applications and modernizing legacy systems.</p>
-                    <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
-                        Add PNNL Work Photo Here
+        <div class="section-content">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Undergraduate Technical Intern - PNNL</h3>
+                        <p class="work-date">June 2024 - Present</p>
+                        <p>Leading research on Sensorfish technology, analyzing data to improve hydroelectric infrastructure's environmental impact. Developing Python applications and modernizing legacy systems.</p>
+                        <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
+                            Add PNNL Work Photo Here
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>High Performance Computing Intern - PNNL</h3>
+                        <p class="work-date">June 2023 - August 2023</p>
+                        <p>Contributed to groundbreaking research on Large Language Models and Logarithmic Number Systems, resulting in a published paper at MICRO 2024. Explored LNS implementations in LLMs with direct applications to systems like ChatGPT.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Christmas Light Technician & Window Cleaner</h3>
+                        <p class="work-date">[Add your dates]</p>
+                        <p>Seasonal work installing holiday lighting displays and maintaining commercial windows. Developed attention to detail, safety protocols, and customer service skills while working at heights.</p>
+                        <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
+                            Add Work Photo Here<br>
+                            (Shows versatility & work ethic!)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Crew Member - McDonald's</h3>
+                        <p class="work-date">[Add your dates]</p>
+                        <p>Developed strong work ethic, customer service skills, and ability to perform under pressure. Every job teaches valuable lessons - this one taught me the importance of teamwork and efficiency!</p>
+                        <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
+                            Add McDonald's Work Photo Here<br>
+                            (Shows work ethic & humility!)
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="timeline-item">
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-content">
+            <h2 class="section-title">Certifications & Skills</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="work-card">
-                    <h3>HPC Intern - PNNL</h3>
-                    <p class="work-date">June 2023 - August 2023</p>
-                    <p>Contributed to groundbreaking research on Large Language Models and Logarithmic Number Systems, resulting in a published paper at MICRO 2024.</p>
+                    <h3>✅ Current Certifications</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">📋 Microsoft Office Specialist (2019)</li>
+                        <li style="padding: 0.5rem 0;">[Add your other current certifications here]</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="timeline-item">
+                
                 <div class="work-card">
-                    <h3>Crew Member - McDonald's</h3>
-                    <p class="work-date">[Add your dates]</p>
-                    <p>Developed strong work ethic, customer service skills, and ability to perform under pressure. Every job teaches valuable lessons - this one taught me the importance of teamwork and efficiency!</p>
-                    <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
-                        Add McDonald's Work Photo Here<br>
-                        (Shows work ethic & humility!)
-                    </div>
+                    <h3>🎯 In Progress / Planned</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">🚑 CPR/First Aid Certification</li>
+                        <li style="padding: 0.5rem 0;">⚡ AED (Automated External Defibrillator)</li>
+                        <li style="padding: 0.5rem 0;">[Add other planned certifications]</li>
+                    </ul>
+                </div>
+                
+                <div class="work-card">
+                    <h3>💻 Technical Skills</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">Languages: Java, Python, SQL</li>
+                        <li style="padding: 0.5rem 0;">Tools: HBET, ROV Technology</li>
+                        <li style="padding: 0.5rem 0;">Specializations: HPC, AI Hardware, LNS</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -609,27 +709,30 @@
 
     <!-- Publications -->
     <section id="publications">
-        <h2 class="section-title">Publications</h2>
-        
-        <div class="publication-box">
-            <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
-            <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
-            <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
-            <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
-            <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank">View Publication →</a></p>
+        <div class="section-content">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="publication-box">
+                <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
+                <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
+                <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
+                <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
+                <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank">View Publication →</a></p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 class="section-title" style="color: white;">Let's Connect!</h2>
-        <p>Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
-        
-        <div class="contact-links">
-            <a href="mailto:gwrfxj@uw.edu">📧 Email</a>
-            <a href="https://github.com/gwrfxj" target="_blank">💻 GitHub</a>
-            <a href="#" target="_blank">💼 LinkedIn</a>
-            <a href="#" target="_blank">📷 Instagram</a>
+        <div class="section-content">
+            <h2 class="section-title" style="color: white;">Let's Connect!</h2>
+            <p>Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
+            
+            <div class="contact-links">
+                <a href="mailto:gwrfxj@uw.edu">📧 Email</a>
+                <a href="https://www.linkedin.com/in/andrew-gui-32a386280/" target="_blank">💼 LinkedIn</a>
+                <a href="#" target="_blank">📷 Instagram</a>
+            </div>
         </div>
     </section>
 
