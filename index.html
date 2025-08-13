@@ -64,7 +64,17 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            /* OPTION 1: Cool gradient (currently active) */
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            
+            /* OPTION 2: Background image with dark overlay - uncomment to use */
+            /* background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+            
             display: flex;
             align-items: center;
             justify-content: center;
