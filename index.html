@@ -178,31 +178,12 @@
         }
         
         /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .profile-img-container {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-        }
-        
         .profile-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
         }
         
         /* STEM Section */
@@ -413,12 +394,17 @@
                 font-size: 2.5rem;
             }
             
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .timeline {
                 padding-left: 2rem;
+            }
+            
+            /* About section mobile layout */
+            #about > .section-content > div {
+                grid-template-columns: 1fr !important;
+            }
+            
+            #about img {
+                height: 400px !important;
             }
         }
     </style>
@@ -458,17 +444,27 @@
     <section id="about">
         <div class="section-content">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="profile-img-container">
-                    <!-- Replace src with your actual image -->
-                    <img src="Profile.jpg" alt="Andrew Gui" class="profile-img">
+            
+            <!-- New Layout with Image at Top Center -->
+            <div style="display: grid; grid-template-columns: 1fr 400px 1fr; gap: 2rem; align-items: start; margin-top: 3rem;">
+                
+                <!-- Left Column Text -->
+                <div style="font-size: 1.1rem; line-height: 1.8;">
+                    <p>I'm Andrew, an ECE student at UW and Electrical Engineering Intern at PNNL. My current work focuses on analyzing SensorFish autonomous sensor data - characterizing fish passage conditions through dams by measuring acceleration, pressure, and rotation to support environmental impact assessments for hydroelectric infrastructure. I conduct field testing, calibration, and acceptance testing of Mini SensorFish devices to ensure they're ready for dam site deployment, while developing Python/Tkinter programs to modernize legacy data acquisition systems.</p>
                 </div>
-                <div class="about-text">
-                    <p>Hey! I'm Andrew, a passionate ECE student at the University of Washington with a unique blend of technical expertise and personal interests. From optimizing LLM hardware architectures to competing with the UW Boxing Team, I bring the same intensity and dedication to everything I do.</p>
-                    <br>
-                    <p>As a valedictorian who graduated high school a year early with a perfect 4.0 GPA, I've always pushed boundaries. Now at UW, I'm continuing that journey with a 3.71 GPA while conducting cutting-edge research at Pacific Northwest National Laboratory, focusing on Machine Learning and Logarithmic Number System implementations.</p>
-                    <br>
-                    <p>But I'm not just about academics - I'm a proud member of the UW Boxing Team, an avid gym-goer, and an adrenaline junkie who loves everything from skydiving to jet skiing. Whether I'm in the ring, in the lab, or jumping out of a plane at 15,000 feet, I believe in pushing limits and living life to the fullest. And yes, I've worked everything from McDonald's to Christmas lights - every experience teaches valuable lessons!</p>
+                
+                <!-- Center Image -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="Profile.jpg" alt="Andrew Gui" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+                    <!-- Bottom Center Text -->
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 2rem; text-align: center;">
+                        But I'm not just about research and engineering - I'm also a proud member of the UW Boxing Team, where mental toughness matters as much as physical strength. You can also find me in the gym at dawn, playing volleyball at the beach, jet skiing, wakeboarding, tubing at Lake Sammamish, or maybe jumping 15,000 feet out of the sky. 
+                    </p>
+                </div>
+                
+                <!-- Right Column Text -->
+                <div style="font-size: 1.1rem; line-height: 1.8;">
+                    <p>As a valedictorian who graduated high school a year early, I've always pushed to accelerate my learning. I've visited cutting-edge labs observing neural network-powered laser cutting systems and autonomous sorting technologies. Combined with my previous PNNL research on LLMs and Logarithmic Number Systems, these experiences showed me that modern engineering requires seamlessly integrating mechanical systems, electrical components, and computational algorithms to solve real-world challenges.</p>
                 </div>
             </div>
         </div>
@@ -686,7 +682,7 @@
                     <div class="work-card">
                         <h3>Undergraduate Technical Intern - PNNL</h3>
                         <p class="work-date">June 2024 - Present</p>
-                        <p>Leading research on Sensorfish technology, analyzing data to improve hydroelectric infrastructure's environmental impact. Developing Python applications and modernizing legacy systems.</p>
+                        <p>Analyzing SensorFish autonomous sensor data to characterize fish passage conditions (acceleration, pressure, rotation) through dams, supporting environmental impact assessments for hydroelectric infrastructure. Conducting field testing, calibration, and acceptance testing of Mini SensorFish devices for dam site deployment. Developing Python/Tkinter data analysis programs and researching equipment upgrades to modernize legacy data acquisition systems.</p>
                         <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
                             Add PNNL Work Photo Here
                         </div>
