@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Gui - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #4a00e0;
+            --secondary: #8e2de2;
+            --accent: #00d4ff;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --gray: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light);
+            position: relative;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s 0.2s both;
+        }
+        
+        .hero .badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s 0.4s both;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .profile-img-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* STEM Section */
+        .research-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .research-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Fitness Section */
+        .fitness-section {
+            background: #f8f9fa;
+        }
+        
+        .fitness-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .fitness-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .fitness-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .fitness-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .fitness-card-content {
+            padding: 1.5rem;
+        }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 75%;
+            animation: progressAnimation 2s;
+        }
+        
+        /* Work Experience */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+        
+        .work-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .work-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Publication Section */
+        .publication-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .publication-box a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--dark);
+            color: var(--light);
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-links a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .contact-links a:hover {
+            transform: scale(1.2);
+            color: var(--accent);
+        }
+        
+        /* Image Upload Placeholder */
+        .img-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes progressAnimation {
+            from {
+                width: 0;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline {
+                padding-left: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stem">Research</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Andrew Gui</h1>
+            <p class="tagline">ECE Student • Researcher • Fitness Enthusiast</p>
+            <div class="badges">
+                <span class="badge">⚡ UW Seattle ECE</span>
+                <span class="badge">🔬 Electrical Engineer at PNNL</span>
+                <span class="badge">💪 Gym Warrior</span>
+                <span class="badge">🚤 Watercraft Enthusiast</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="profile-img-container">
+                <!-- Replace src with your actual image -->
+                <div class="profile-img img-placeholder">
+                    Add Your Profile Picture Here<br>
+                    (Professional headshot or casual photo)
+                </div>
+            </div>
+            <div class="about-text">
+                <p>Hey! I'm Andrew, a passionate ECE student at the University of Washington with a unique blend of technical expertise and personal interests. From optimizing LLM hardware architectures to crushing personal records at the gym, I bring the same intensity and dedication to everything I do.</p>
+                <br>
+                <p>As a valedictorian who graduated high school a year early with a perfect 4.0 GPA, I've always pushed boundaries. Now at UW, I'm continuing that journey with a 3.71 GPA while conducting cutting-edge research at Pacific Northwest National Laboratory.</p>
+                <br>
+                <p>But I'm not just about academics - I believe in building both mind and body. You'll find me in the gym as often as in the lab, and yes, I've worked at McDonald's too - every experience teaches valuable lessons!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEM/Research Section -->
+    <section id="stem">
+        <h2 class="section-title">Research & STEM Journey</h2>
+        
+        <div class="research-card">
+            <h3>🔬 Current Research: Sensorfish Technology at PNNL</h3>
+            <p>Working as an Undergraduate Technical Intern in Electrical Engineering, I analyze autonomous sensor data to characterize fish passage conditions through dams. This involves field testing, calibration, and developing Python/Tkinter analysis programs.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Tkinter</span>
+                <span class="tech-badge">Data Analysis</span>
+                <span class="tech-badge">Hardware Testing</span>
+            </div>
+        </div>
+
+        <div class="research-card">
+            <h3>💻 High-Performance Computing & AI Hardware</h3>
+            <p>Co-authored research on optimizing Large Language Models using Logarithmic Number System (LNS) implementations. This work involved comparative analysis of LNS vs. Floating Point systems, contributing to cutting-edge AI hardware architecture design.</p>
+            <div class="tech-stack">
+                <span class="tech-badge">LLMs</span>
+                <span class="tech-badge">HPC</span>
+                <span class="tech-badge">Machine Learning</span>
+                <span class="tech-badge">Architecture Codesign</span>
+            </div>
+        </div>
+
+        <!-- Add images of you in the lab, at conferences, etc. -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem;">
+            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                Add Lab Photo Here
+            </div>
+            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                Add Conference/Presentation Photo
+            </div>
+            <div class="img-placeholder" style="height: 200px; border-radius: 10px;">
+                Add Research Team Photo
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Section -->
+    <section id="fitness" class="fitness-section">
+        <h2 class="section-title">Fitness Journey 💪</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Building strength in body and mind - my transformation and dedication to fitness</p>
+        
+        <div class="fitness-gallery">
+            <div class="fitness-card">
+                <div class="fitness-img img-placeholder">
+                    Add Progress Photo 1<br>
+                    (Beginning of journey)
+                </div>
+                <div class="fitness-card-content">
+                    <h3>The Beginning</h3>
+                    <p>Where it all started - deciding to transform my life through fitness</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fitness-card">
+                <div class="fitness-img img-placeholder">
+                    Add Progress Photo 2<br>
+                    (Mid-journey)
+                </div>
+                <div class="fitness-card-content">
+                    <h3>Building Momentum</h3>
+                    <p>Consistency paying off - seeing real changes and getting stronger</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fitness-card">
+                <div class="fitness-img img-placeholder">
+                    Add Current Photo<br>
+                    (Recent gym photo)
+                </div>
+                <div class="fitness-card-content">
+                    <h3>Current Status</h3>
+                    <p>Stronger than ever - fitness is now a lifestyle, not just a goal</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fitness-card">
+                <div class="fitness-img img-placeholder">
+                    Add Gym Photo<br>
+                    (Action shot or pose)
+                </div>
+                <div class="fitness-card-content">
+                    <h3>Daily Grind</h3>
+                    <p>Every day is an opportunity to become better than yesterday</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+            <h3 style="color: var(--primary); margin-bottom: 1rem;">My Fitness Philosophy</h3>
+            <p>The same discipline that drives my academic success fuels my fitness journey. Whether it's debugging code or pushing through that last rep, it's all about persistence, consistency, and constantly challenging yourself to grow.</p>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <h2 class="section-title">Hobbies & Adventures 🚤</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Life's not all work and gym - I love getting out on the water!</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="research-card" style="background: linear-gradient(135deg, #00d4ff 0%, #0066cc 100%);">
+                <h3>🚤 Jet Skiing</h3>
+                <p>Nothing beats the rush of flying across the water on a jet ski. It's my favorite way to unwind and get that adrenaline pumping!</p>
+                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                    Add Jet Ski Photo Here
+                </div>
+            </div>
+            
+            <div class="research-card" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
+                <h3>🏄 Watercraft Activities</h3>
+                <p>From wakeboarding to tubing, if it involves water and speed, I'm all in. The Pacific Northwest has amazing spots for water sports!</p>
+                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                    Add Water Activity Photo Here
+                </div>
+            </div>
+            
+            <div class="research-card" style="background: linear-gradient(135deg, #48cae4 0%, #00a8cc 100%);">
+                <h3>🌊 Lake Days</h3>
+                <p>Weekend trips to the lake with friends, bringing the jet skis out, and just enjoying life. Balance is everything!</p>
+                <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
+                    Add Lake Day Photo Here
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="work-card">
+                    <h3>Undergraduate Technical Intern - PNNL</h3>
+                    <p class="work-date">June 2024 - Present</p>
+                    <p>Leading research on Sensorfish technology, analyzing data to improve hydroelectric infrastructure's environmental impact. Developing Python applications and modernizing legacy systems.</p>
+                    <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
+                        Add PNNL Work Photo Here
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="work-card">
+                    <h3>HPC Intern - PNNL</h3>
+                    <p class="work-date">June 2023 - August 2023</p>
+                    <p>Contributed to groundbreaking research on Large Language Models and Logarithmic Number Systems, resulting in a published paper at MICRO 2024.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="work-card">
+                    <h3>Crew Member - McDonald's</h3>
+                    <p class="work-date">[Add your dates]</p>
+                    <p>Developed strong work ethic, customer service skills, and ability to perform under pressure. Every job teaches valuable lessons - this one taught me the importance of teamwork and efficiency!</p>
+                    <div class="img-placeholder" style="height: 150px; margin-top: 1rem; border-radius: 10px;">
+                        Add McDonald's Work Photo Here<br>
+                        (Shows work ethic & humility!)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2 class="section-title">Publications</h2>
+        
+        <div class="publication-box">
+            <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
+            <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
+            <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
+            <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
+            <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank">View Publication →</a></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title" style="color: white;">Let's Connect!</h2>
+        <p>Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
+        
+        <div class="contact-links">
+            <a href="mailto:gwrfxj@uw.edu">📧 Email</a>
+            <a href="https://github.com/gwrfxj" target="_blank">💻 GitHub</a>
+            <a href="#" target="_blank">💼 LinkedIn</a>
+            <a href="#" target="_blank">📷 Instagram</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.research-card, .fitness-card, .work-card, .publication-box').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
