@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Gui - Portfolio</title>
+    
+    <!-- Professional Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,22 +18,37 @@
         }
         
         :root {
-            --primary: #4a00e0;
-            --secondary: #8e2de2;
-            --accent: #00d4ff;
-            --dark: #0a0a0a;
-            --light: #ffffff;
-            --gray: #6c757d;
+            --primary: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #3b82f6;
+            --dark-bg: #0f0f0f;
+            --dark-section: #1a1a1a;
+            --dark-card: #262626;
+            --light-text: #e5e5e5;
+            --muted-text: #a3a3a3;
+            --border-color: #2e2e2e;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
+            color: var(--light-text);
             overflow-x: hidden;
             margin: 0;
             padding: 0;
-            background: #f8f9fa; /* Fallback color to prevent white borders */
+            background: var(--dark-bg);
+        }
+        
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        p {
+            font-weight: 400;
+            letter-spacing: 0.01em;
         }
         
         /* Navigation */
@@ -35,10 +56,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
         
         nav ul {
@@ -51,12 +73,14 @@
         }
         
         nav a {
-            color: var(--light);
+            color: var(--light-text);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: all 0.3s;
             padding: 0.5rem 1rem;
             border-radius: 5px;
+            letter-spacing: 0.02em;
         }
         
         nav a:hover {
@@ -67,22 +91,12 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            /* OPTION 1: Cool gradient (currently active) */
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-            
-            /* OPTION 2: Background image with dark overlay - uncomment to use */
-            /* background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-                url('hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; */
-            
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: var(--light);
+            color: white;
             position: relative;
         }
         
@@ -92,16 +106,21 @@
         }
         
         .hero h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s;
+            background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
         .hero .tagline {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
             animation: fadeInUp 1s 0.2s both;
+            font-weight: 300;
+            letter-spacing: 0.05em;
         }
         
         .hero .badges {
@@ -113,16 +132,24 @@
         }
         
         .badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         
         /* Sections */
         section {
             padding: 5rem 2rem;
             width: 100%;
+            background: var(--dark-section);
+        }
+        
+        section:nth-child(even) {
+            background: var(--dark-bg);
         }
         
         .section-content {
@@ -130,46 +157,8 @@
             margin: 0 auto;
         }
         
-        /* Alternating section backgrounds */
-        section:nth-child(even) {
-            background: #f8f9fa;
-        }
-        
-        section:nth-child(odd) {
-            background: white;
-        }
-        
-        /* Keep hero, fitness, and contact sections with their custom backgrounds */
-        .hero {
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
-        }
-        
-        #fitness {
-            background: #f8f9fa !important;
-        }
-        
-        #hobbies {
-            background: white !important;
-        }
-        
-        #work {
-            background: #f8f9fa !important;
-        }
-        
-        #certifications {
-            background: white !important;
-        }
-        
-        #publications {
-            background: #f8f9fa !important;
-        }
-        
-        .contact {
-            background: var(--dark) !important;
-        }
-        
         .section-title {
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-align: center;
             margin-bottom: 3rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -177,33 +166,76 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* About Section */
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        /* About Section - NEW DESIGN */
+        #about {
+            background: var(--dark-section);
         }
         
-        /* STEM Section */
-        .research-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
+        .about-container {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 4rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+        
+        .about-image-wrapper {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--border-color);
+        }
+        
+        .about-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--light-text);
+        }
+        
+        .about-text p {
             margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+        }
+        
+        .about-text p:first-child::first-letter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.8;
+            margin: 0.1rem 0.5rem 0 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Research Cards */
+        .research-card {
+            background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .research-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
         
         .research-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
+            font-weight: 600;
         }
         
         .tech-stack {
@@ -214,59 +246,65 @@
         }
         
         .tech-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             padding: 0.5rem 1rem;
             border-radius: 20px;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         
-        /* Fitness Section */
-        
-        .fitness-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
+        /* Fitness Cards */
         .fitness-card {
-            background: white;
+            background: var(--dark-card);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
+            border: 1px solid var(--border-color);
         }
         
         .fitness-card:hover {
             transform: scale(1.05);
         }
         
-        .fitness-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
         .fitness-card-content {
             padding: 1.5rem;
         }
         
-        .progress-bar {
-            background: #e0e0e0;
-            height: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 1rem;
+        .fitness-card-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
         }
         
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            width: 75%;
-            animation: progressAnimation 2s;
+        .fitness-card-content p {
+            color: var(--muted-text);
         }
         
-        /* Work Experience */
+        /* Work Cards */
+        .work-card {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+        
+        .work-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .work-date {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Timeline */
         .timeline {
             position: relative;
             padding-left: 3rem;
@@ -296,48 +334,33 @@
             height: 20px;
             border-radius: 50%;
             background: var(--primary);
-            border: 3px solid white;
+            border: 3px solid var(--dark-section);
             box-shadow: 0 0 0 3px var(--primary);
         }
         
-        .work-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .work-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .work-date {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        /* Publication Section */
+        /* Publication Box */
         .publication-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
             color: white;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 2.5rem;
+            border-radius: 20px;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .publication-box a {
             color: white;
             text-decoration: underline;
+            font-weight: 500;
         }
         
         /* Contact Section */
         .contact {
-            background: var(--dark);
-            color: var(--light);
+            background: var(--dark-bg) !important;
+            color: var(--light-text);
             text-align: center;
+            border-top: 1px solid var(--border-color);
         }
         
         .contact-links {
@@ -348,26 +371,63 @@
         }
         
         .contact-links a {
-            color: var(--light);
-            font-size: 1.5rem;
-            transition: transform 0.3s;
+            color: var(--light-text);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            padding: 0.8rem 1.5rem;
+            background: var(--dark-card);
+            border-radius: 10px;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            font-weight: 500;
         }
         
         .contact-links a:hover {
-            transform: scale(1.2);
-            color: var(--accent);
+            transform: scale(1.1);
+            background: var(--primary);
+            border-color: var(--primary);
         }
         
-        /* Image Upload Placeholder */
+        /* Image Placeholder */
         .img-placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 500;
             text-align: center;
             padding: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .fitness-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .fitness-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .progress-bar {
+            background: var(--border-color);
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 75%;
+            animation: progressAnimation 2s;
         }
         
         /* Animations */
@@ -389,22 +449,32 @@
         }
         
         /* Responsive */
+        @media (max-width: 968px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-image-wrapper {
+                position: static;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
             }
             
             .timeline {
                 padding-left: 2rem;
-            }
-            
-            /* About section mobile layout */
-            #about > .section-content > div {
-                grid-template-columns: 1fr !important;
-            }
-            
-            #about img {
-                height: 400px !important;
             }
         }
     </style>
@@ -429,7 +499,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Andrew Gui</h1>
-            <p class="tagline">Electrical and Computer Engineering Student</p>
+            <p class="tagline">Electrical & Computer Engineering • Research • Innovation</p>
             <div class="badges">
                 <span class="badge">⚡ UW Seattle ECE</span>
                 <span class="badge">🔬 Electrical Engineer at PNNL</span>
@@ -440,31 +510,26 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - COMPLETELY REDESIGNED -->
     <section id="about">
         <div class="section-content">
             <h2 class="section-title">About Me</h2>
             
-            <!-- New Layout with Image at Top Center -->
-            <div style="display: grid; grid-template-columns: 1fr 400px 1fr; gap: 2rem; align-items: start; margin-top: 3rem;">
-                
-                <!-- Left Column Text -->
-                <div style="font-size: 1.1rem; line-height: 1.8;">
-                    <p>I'm Andrew, an ECE student at UW and Electrical Engineering Intern at PNNL. My current work focuses on analyzing SensorFish autonomous sensor data - characterizing fish passage conditions through dams by measuring acceleration, pressure, and rotation to support environmental impact assessments for hydroelectric infrastructure. I conduct field testing, calibration, and acceptance testing of Mini SensorFish devices to ensure they're ready for dam site deployment, while developing Python/Tkinter programs to modernize legacy data acquisition systems.</p>
+            <div class="about-container">
+                <!-- Left: Image -->
+                <div class="about-image-wrapper">
+                    <img src="Profile.jpg" alt="Andrew Gui" class="about-image">
                 </div>
                 
-                <!-- Center Image -->
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="Profile.jpg" alt="Andrew Gui" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
-                    <!-- Bottom Center Text -->
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 2rem; text-align: center;">
-                        But I'm not just about research and engineering - I'm also a proud member of the UW Boxing Team, where mental toughness matters as much as physical strength. You can also find me in the gym at dawn, playing volleyball at the beach, jet skiing, wakeboarding, tubing at Lake Sammamish, or maybe jumping 15,000 feet out of the sky. 
+                <!-- Right: Text Content -->
+                <div class="about-text">
+                    <p>
+                        From dismantling household electronics as a curious child to co-authoring research on Large Language Models at PNNL, my journey in engineering has been driven by an insatiable desire to understand how things work—and make them work better. As a valedictorian who graduated high school a year early with a 4.0 GPA, I've always pushed boundaries, whether that meant teaching myself programming in middle school, securing competitive internships at Pacific Northwest National Laboratory, or jumping 15,000 feet out of an airplane. Currently pursuing Electrical and Computer Engineering at the University of Washington (3.71 GPA), I'm working as an Undergraduate Technical Intern at PNNL, where I analyze SensorFish autonomous sensor data to characterize fish passage conditions through hydroelectric dams—combining my passion for technology with environmental impact.
                     </p>
-                </div>
-                
-                <!-- Right Column Text -->
-                <div style="font-size: 1.1rem; line-height: 1.8;">
-                    <p>As a valedictorian who graduated high school a year early, I've always pushed to accelerate my learning. I've visited cutting-edge labs observing neural network-powered laser cutting systems and autonomous sorting technologies. Combined with my previous PNNL research on LLMs and Logarithmic Number Systems, these experiences showed me that modern engineering requires seamlessly integrating mechanical systems, electrical components, and computational algorithms to solve real-world challenges.</p>
+                    
+                    <p>
+                        What sets me apart isn't just technical capability—it's the interdisciplinary mindset I bring to every challenge. My research on optimizing LLMs using Logarithmic Number Systems taught me that breakthrough innovations happen when hardware meets software meets creative problem-solving. This philosophy extends beyond the lab: as a member of the UW Boxing Team, I've learned that true strength comes from mental discipline as much as physical power. Whether I'm developing Python/Tkinter programs to modernize legacy systems, conducting field tests on Mini SensorFish devices, wakeboarding at Lake Sammamish, or presenting research at international conferences, I approach everything with the same intensity and determination. Engineering excites me because it's the art of making the impossible work in the real world—and the real world never plays nice. That's exactly why I love it.
+                    </p>
                 </div>
             </div>
         </div>
@@ -516,10 +581,10 @@
     <section id="fitness">
         <div class="section-content">
             <h2 class="section-title">Fitness Journey 💪</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">Building strength in body and mind - from transformation to the boxing ring</p>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--muted-text);">Building strength in body and mind - from transformation to the boxing ring</p>
             
             <!-- Gym Progress Section FIRST -->
-            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem;">Transformation Journey 🏋️</h3>
+            <h3 style="text-align: center; margin: 3rem 0 2rem; font-size: 1.8rem; color: var(--light-text);">Transformation Journey 🏋️</h3>
             <div class="fitness-gallery">
                 <div class="fitness-card">
                     <div class="fitness-img img-placeholder">
@@ -575,20 +640,20 @@
                 </div>
             </div>
             
-            <!-- Boxing Feature Section MOVED BELOW -->
-            <div style="background: linear-gradient(135deg, #4b2e83 0%, #85754d 100%); color: white; padding: 3rem; border-radius: 20px; margin: 3rem 0; text-align: center; box-shadow: 0 10px 30px rgba(75, 46, 131, 0.3);">
+            <!-- Boxing Feature Section -->
+            <div style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); color: white; padding: 3rem; border-radius: 20px; margin: 3rem 0; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🥊 UW BOXING TEAM 🥊</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #ffc700;">Proud member of the University of Washington Boxing Team</p>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Proud member of the University of Washington Boxing Team</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #ffc700;">
+                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #fbbf24;">
                         Add Boxing Training Photo<br>
                         (In the ring or training)
                     </div>
-                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #ffc700;">
+                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #fbbf24;">
                         Add Team Photo<br>
                         (With UW Boxing Team)
                     </div>
-                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #ffc700;">
+                    <div class="img-placeholder" style="height: 250px; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 3px solid #fbbf24;">
                         Add Boxing Action Shot<br>
                         (Competition or sparring)
                     </div>
@@ -598,23 +663,23 @@
 
             <!-- Training Split Section -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4b2e83; margin-bottom: 1rem;">🥊 Boxing Training</h3>
-                    <p>Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🥊 Boxing Training</h3>
+                    <p style="color: var(--muted-text);">Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4b2e83; margin-bottom: 1rem;">💪 Strength Training</h3>
-                    <p>Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">💪 Strength Training</h3>
+                    <p style="color: var(--muted-text);">Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4b2e83; margin-bottom: 1rem;">🏃 Conditioning</h3>
-                    <p>High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🏃 Conditioning</h3>
+                    <p style="color: var(--muted-text);">High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p>
                 </div>
             </div>
 
-            <div style="background: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                <h3 style="color: #4b2e83; margin-bottom: 1rem;">My Fitness Philosophy</h3>
-                <p>The same discipline that drives my academic success fuels my fitness journey. Whether it's debugging code, pushing through that last rep, or going another round in the ring - it's all about persistence, consistency, and constantly challenging yourself to grow. Being part of the UW Boxing Team has taught me that true strength comes from mental toughness as much as physical power.</p>
+            <div class="work-card" style="margin-top: 3rem;">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">My Fitness Philosophy</h3>
+                <p style="color: var(--muted-text);">The same discipline that drives my academic success fuels my fitness journey. Whether it's debugging code, pushing through that last rep, or going another round in the ring - it's all about persistence, consistency, and constantly challenging yourself to grow. Being part of the UW Boxing Team has taught me that true strength comes from mental toughness as much as physical power.</p>
             </div>
         </div>
     </section>
@@ -623,11 +688,11 @@
     <section id="hobbies">
         <div class="section-content">
             <h2 class="section-title">Adventures & Adrenaline 🚁</h2>
-            <p style="text-align: center; margin-bottom: 3rem;">Life's too short to stay on the ground - from skydiving to jet skiing!</p>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--muted-text);">Life's too short to stay on the ground - from skydiving to jet skiing!</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <!-- Skydiving Card -->
-                <div class="research-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="research-card" style="background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);">
                     <h3>🪂 Skydiving</h3>
                     <p>There's nothing quite like jumping out of a perfectly good airplane! The ultimate adrenaline rush and a reminder that life's biggest rewards come from stepping outside your comfort zone.</p>
                     <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
@@ -637,7 +702,7 @@
                 </div>
                 
                 <!-- Jet Skiing Card -->
-                <div class="research-card" style="background: linear-gradient(135deg, #00d4ff 0%, #0066cc 100%);">
+                <div class="research-card" style="background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);">
                     <h3>🚤 Jet Skiing</h3>
                     <p>Nothing beats the rush of flying across the water on a jet ski. It's my favorite way to unwind and get that adrenaline pumping!</p>
                     <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
@@ -646,7 +711,7 @@
                 </div>
                 
                 <!-- Water Sports Card -->
-                <div class="research-card" style="background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);">
+                <div class="research-card" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
                     <h3>🏄 Watercraft Activities</h3>
                     <p>From wakeboarding to tubing, if it involves water and speed, I'm all in. The Pacific Northwest has amazing spots for water sports!</p>
                     <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
@@ -655,7 +720,7 @@
                 </div>
                 
                 <!-- Lake Days Card -->
-                <div class="research-card" style="background: linear-gradient(135deg, #48cae4 0%, #00a8cc 100%);">
+                <div class="research-card" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
                     <h3>🌊 Lake Days</h3>
                     <p>Weekend trips to the lake with friends, bringing the jet skis out, and just enjoying life. Balance is everything!</p>
                     <div class="img-placeholder" style="height: 200px; margin-top: 1rem; border-radius: 10px;">
@@ -665,7 +730,7 @@
             </div>
             
             <!-- Adventure Quote Section -->
-            <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center;">
+            <div style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); color: white; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1);">
                 <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">🎯 Adventure Philosophy</h3>
                 <p style="font-size: 1.1rem;">"Life begins at the end of your comfort zone. Whether it's jumping from 15,000 feet, stepping into the boxing ring, or tackling complex research problems - the biggest growth comes from embracing challenges head-on."</p>
             </div>
@@ -733,26 +798,26 @@
                 <div class="work-card">
                     <h3>✅ Current Certifications</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0;">📋 Microsoft Office Specialist (2019)</li>
-                        <li style="padding: 0.5rem 0;">[Add your other current certifications here]</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">📋 Microsoft Office Specialist (2019)</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">[Add your other current certifications here]</li>
                     </ul>
                 </div>
                 
                 <div class="work-card">
                     <h3>🎯 In Progress / Planned</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0;">🚑 CPR/First Aid Certification</li>
-                        <li style="padding: 0.5rem 0;">⚡ AED (Automated External Defibrillator)</li>
-                        <li style="padding: 0.5rem 0;">[Add other planned certifications]</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">🚑 CPR/First Aid Certification</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">⚡ AED (Automated External Defibrillator)</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">[Add other planned certifications]</li>
                     </ul>
                 </div>
                 
                 <div class="work-card">
                     <h3>💻 Technical Skills</h3>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0;">Languages: Java, Python, SQL</li>
-                        <li style="padding: 0.5rem 0;">Tools: HBET, ROV Technology</li>
-                        <li style="padding: 0.5rem 0;">Specializations: HPC, AI Hardware, LNS</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">Languages: Java, Python, SQL</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">Tools: HBET, ROV Technology</li>
+                        <li style="padding: 0.5rem 0; color: var(--muted-text);">Specializations: HPC, AI Hardware, LNS</li>
                     </ul>
                 </div>
             </div>
@@ -778,7 +843,7 @@
     <section id="contact" class="contact">
         <div class="section-content">
             <h2 class="section-title" style="color: white;">Let's Connect!</h2>
-            <p>Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
+            <p style="color: var(--muted-text);">Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
             
             <div class="contact-links">
                 <a href="mailto:gwrfxj@uw.edu">📧 Email</a>
