@@ -1,3 +1,2 @@
-# my-overall-portfolio
-Andrew Gui's portfolio
+# Andrews-Biography
 https://andrews-portfolio.pages.dev/
