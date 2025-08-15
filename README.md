@@ -1,2 +1,2 @@
 # Andrews-Biography
-https://andrews-portfolio.pages.dev/
+andrews-personal-website.pages.dev
