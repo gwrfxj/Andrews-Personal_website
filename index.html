@@ -9,481 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #6366f1;
-            --secondary: #a78bfa;
-            --accent: #3b82f6;
-            --electric-purple: #8b5cf6;
-            --dark-bg: #0f0f0f;
-            --dark-section: #1a1a1a;
-            --dark-card: #262626;
-            --light-text: #e5e5e5;
-            --muted-text: #a3a3a3;
-            --border-color: #2e2e2e;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--light-text);
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-            background: var(--dark-bg);
-        }
-        
-        /* Typography */
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        
-        p {
-            font-weight: 400;
-            letter-spacing: 0.01em;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            color: var(--light-text);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            letter-spacing: 0.02em;
-        }
-        
-        nav a:hover {
-            background: var(--primary);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .hero-content {
-            z-index: 2;
-            padding: 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s;
-            background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 1s 0.2s both;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-        
-        .hero .badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s 0.4s both;
-        }
-        
-        .badge {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-            width: 100%;
-            background: var(--dark-section);
-        }
-        
-        /* Specific sections with dark background for alternating pattern */
-        #stem, #work, #portfolio, #contact {
-            background: var(--dark-bg);
-        }
-        
-        .section-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        /* About Section - NEW DESIGN */
-        #about {
-            background: var(--dark-section);
-        }
-        
-        .about-container {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 4rem;
-            align-items: start;
-            margin-top: 3rem;
-        }
-        
-        .about-image-wrapper {
-            position: sticky;
-            top: 100px;
-        }
-        
-        .about-image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--border-color);
-        }
-        
-        .about-text {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: var(--light-text);
-        }
-        
-        .about-text p {
-            margin-bottom: 2rem;
-            text-align: left;
-        }
-        
-        .about-text p:first-child::first-letter {
-            font-size: 3.5rem;
-            font-weight: 700;
-            float: left;
-            line-height: 0.8;
-            margin: 0.1rem 0.5rem 0 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        /* Research Cards */
-        .research-card {
-            background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-        
-        .research-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-        /* Fitness Cards */
-        .fitness-card {
-            background: var(--dark-card);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            border: 1px solid var(--border-color);
-        }
-        
-        .fitness-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .fitness-card-content {
-            padding: 1.5rem;
-        }
-        
-        .fitness-card-content h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .fitness-card-content p {
-            color: var(--muted-text);
-        }
-        
-        /* Work Cards */
-        .work-card {
-            background: var(--dark-card);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
-        }
-        
-        .work-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-        }
-        
-        .work-date {
-            color: var(--muted-text);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 1rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.4rem;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: 3px solid var(--dark-section);
-            box-shadow: 0 0 0 3px var(--primary);
-        }
-        
-        /* Publication Box */
-        .publication-box {
-            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
-            color: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .publication-box a {
-            color: white;
-            text-decoration: underline;
-            font-weight: 500;
-        }
-        
-        /* Contact Section */
-        .contact {
-            background: var(--dark-bg) !important;
-            color: var(--light-text);
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-links a {
-            color: var(--light-text);
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            padding: 0.8rem 1.5rem;
-            background: var(--dark-card);
-            border-radius: 10px;
-            text-decoration: none;
-            border: 1px solid var(--border-color);
-            font-weight: 500;
-        }
-        
-        .contact-links a:hover {
-            transform: scale(1.1);
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        /* Image Placeholder */
-        .img-placeholder {
-            background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        .fitness-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
-        
-        .fitness-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .progress-bar {
-            background: var(--border-color);
-            height: 10px;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-top: 1rem;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            width: 75%;
-            animation: progressAnimation 2s;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes progressAnimation {
-            from {
-                width: 0;
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 968px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .about-image-wrapper {
-                position: static;
-            }
-            
-            .about-image {
-                height: 400px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .timeline {
-                padding-left: 2rem;
-            }
-            
-            #portfolio > .section-content > div:first-child {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -516,7 +44,7 @@
         </div>
     </section>
 
-    <!-- About Section - COMPLETELY REDESIGNED -->
+    <!-- About Section -->
     <section id="about">
         <div class="section-content">
             <h2 class="section-title">About Me</h2>
@@ -584,50 +112,36 @@
             </p>
             
             <div class="fitness-gallery">
-            
+                <!-- Beginning -->
                 <div class="fitness-card">
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Beginning.jpg"
-                         alt="Beginning of fitness journey"
-                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Beginning.jpg" alt="Beginning of fitness journey" style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
                     <div class="fitness-card-content">
                         <h3>The Beginning</h3>
                         <p>2023 - Where it all started, being at 300 lbs.</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 30%;"></div>
-                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 30%;"></div></div>
                     </div>
                 </div>
-            
+                <!-- Mid Journey -->
                 <div class="fitness-card">
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Mid-Journey.jpg"
-                         alt="Mid-point of fitness journey"
-                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Mid-Journey.jpg" alt="Mid-point of fitness journey" style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
                     <div class="fitness-card-content">
                         <h3>Building Momentum</h3>
                         <p>2024 - Consistency paying off, seeing real changes and getting stronger</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 60%;"></div>
-                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 60%;"></div></div>
                     </div>
                 </div>
-            
+                <!-- Current -->
                 <div class="fitness-card">
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/CurrentGymMe.jpg"
-                         alt="Current gym progress photo"
-                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/CurrentGymMe.jpg" alt="Current gym progress photo" style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
                     <div class="fitness-card-content">
                         <h3>Current Status</h3>
                         <p>2025 - Stronger than ever, fitness is now a lifestyle, not just a goal</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%;"></div>
-                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
                     </div>
                 </div>
-            
+                <!-- Daily Grind -->
                 <div class="fitness-card">
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/ActionPhoto.jpg"
-                         alt="Daily workout grind action shot"
-                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/ActionPhoto.jpg" alt="Daily workout grind action shot" style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
                     <div class="fitness-card-content">
                         <h3>Daily Grind</h3>
                         <p>Every day is an opportunity to become better than yesterday</p>
@@ -640,36 +154,23 @@
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🥊 UW BOXING TEAM 🥊</h2>
                 <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Pride. Poise. Team. Family.</p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingTeamPhoto.JPG"
-                         alt="Boxing team group photo"
-                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
-                    
-                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingPhoto.JPG"
-                         alt="Personal boxing portrait"
-                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingTeamPhoto.JPG" alt="Boxing team group photo" style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingPhoto.JPG" alt="Personal boxing portrait" style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
                 </div>
                 <p style="margin-top: 2rem; font-size: 1.1rem;">As I grow and learn, I've realized boxing isn't just physical strength - it's about discipline, strategy, and mental toughness. These skills have directly translated to my academic and professional life, and I cannot thank my team leads, coaches, and peers enough. 💜💛</p>
             </div>
 
-            <!-- Training Split Section -->
+            <!-- Training Split -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <div class="work-card">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🥊 Boxing Training</h3>
-                    <p style="color: var(--muted-text);">Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p>
-                </div>
-                <div class="work-card">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem;">💪 Strength Training</h3>
-                    <p style="color: var(--muted-text);">Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p>
-                </div>
-                <div class="work-card">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🏃 Conditioning</h3>
-                    <p style="color: var(--muted-text);">High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p>
-                </div>
+                <div class="work-card"><h3>🥊 Boxing Training</h3><p>Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p></div>
+                <div class="work-card"><h3>💪 Strength Training</h3><p>Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p></div>
+                <div class="work-card"><h3>🏃 Conditioning</h3><p>High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p></div>
             </div>
 
+            <!-- Philosophy -->
             <div class="work-card" style="margin-top: 3rem; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); color: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
-                <h3 style="color: white; margin-bottom: 1rem;">My Fitness Philosophy</h3>
-                <p style="color: white;">Consistency, persistence, and constantly challenging yourself are the only ways to grow. The skills gained from training at the gym translate directly to playing sports, studying, working—really everything in life. It's okay to be scared, but it's not okay to stay scared. Every rep, every round, every challenge is an opportunity to prove that you're stronger than your excuses.</p>
+                <h3>My Fitness Philosophy</h3>
+                <p>Consistency, persistence, and constantly challenging yourself are the only ways to grow. The skills gained from training at the gym translate directly to playing sports, studying, working—really everything in life. It's okay to be scared, but it's not okay to stay scared. Every rep, every round, every challenge is an opportunity to prove that you're stronger than your excuses.</p>
             </div>
         </div>
     </section>
@@ -678,39 +179,15 @@
     <section id="work">
         <div class="section-content">
             <h2 class="section-title">Work Experience</h2>
-            
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="work-card">
-                        <h3>Undergraduate Technical Intern - Electrical Engineering | PNNL</h3>
-                        <p class="work-date">June 2024 - Present (Part-time during school year)</p>
-                        <p>Working with cutting-edge SensorFish technology, autonomous sensors that must survive extreme hydraulic forces while collecting critical fish passage data. My role spans the full engineering spectrum: precision soldering for reliable sensor-to-computer connections, executing rigorous calibration protocols to ensure measurement accuracy, assisting in building Python/Tkinter applications for data visualization, and analyzing the sensor data to characterize the harsh conditions fish experience (acceleration, pressure, rotation) in such dams. This position has taught me as well that impactful engineering requires both technical excellence and adaptability, especially when deploying systems in harsh conditions where reliability is non-negotiable.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="work-card">
-                        <h3>Christmas Light Technician & Window Cleaner | Radiant LLC</h3>
-                        <p class="work-date">November 2023 - February 2024 (4 months)</p>
-                        <p>More than simply seasonal work, this role demanded creativity, project management, and leadership. I assisted and followed customers' custom design orders for holiday lighting installations, managing everything from initial concept to final implementation. On top of the lights themselves, I practiced strict adherence to safety protocols for elevated work, and training/mentoring new team members in both technical skills and customer interaction. The experience taught me valuable lessons about project management, client relations, and the importance of attention to detail.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="work-card">
-                        <h3>High Performance Computing Intern | PNNL</h3>
-                        <p class="work-date">June 2023 - August 2023 (3 months)</p>
-                        <p>Selected for a competitive High Performance Computing internship, I conducted comparative analysis between LNS and traditional Floating Point architectures, exploring how next-generation AI systems could achieve dramatic efficiency gains. Through collaborative research, involving PyTorch implementations and dynamic data format exploration, I co-authored a conference paper published at MICRO 2024, one of the premier venues for computer architecture research. This internship showed me how innovative problem-solving can revolutionize AI capabilities, directly impacting systems like ChatGPT and other transformative technologies.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="work-card">
-                        <h3>Crew Member | McDonald's</h3>
-                        <p class="work-date">November 2022 - June 2023 (8 months)</p>
-                        <p>In my first professional role, I learned the fundamentals of operational excellence and customer service. Handling high-volume orders during peak hours all while maintaining accuracy and positive customer interactions, including serving Spanish-speaking customers in their preferred language. I proactively took on training responsibilities, helping new employees develop the skills needed in fast-paced situations. This experience built my professional foundation: working under pressure, collaborating with diverse teams, and understanding that excellence comes from consistency and attention to detail, regardless of the task.</p>
-                    </div>
-                </div>
+                <!-- Job 1 -->
+                <div class="timeline-item"><div class="work-card"><h3>Undergraduate Technical Intern - Electrical Engineering | PNNL</h3><p class="work-date">June 2024 - Present (Part-time during school year)</p><p>Working with cutting-edge SensorFish technology...</p></div></div>
+                <!-- Job 2 -->
+                <div class="timeline-item"><div class="work-card"><h3>Christmas Light Technician & Window Cleaner | Radiant LLC</h3><p class="work-date">Nov 2023 - Feb 2024 (4 months)</p><p>More than simply seasonal work, this role demanded creativity...</p></div></div>
+                <!-- Job 3 -->
+                <div class="timeline-item"><div class="work-card"><h3>High Performance Computing Intern | PNNL</h3><p class="work-date">June 2023 - Aug 2023 (3 months)</p><p>Selected for a competitive internship, I conducted comparative analysis...</p></div></div>
+                <!-- Job 4 -->
+                <div class="timeline-item"><div class="work-card"><h3>Crew Member | McDonald's</h3><p class="work-date">Nov 2022 - June 2023 (8 months)</p><p>In my first professional role, I learned the fundamentals...</p></div></div>
             </div>
         </div>
     </section>
@@ -719,145 +196,75 @@
     <section id="certifications">
         <div class="section-content">
             <h2 class="section-title">Certifications & Skills</h2>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="work-card" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
-                    <h3 style="color: white;">✅ Current Certifications</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; color: white;">📋 Microsoft Office Specialist 2019 (Word, Excel, PowerPoint, Outlook)</li>
-                    </ul>
+                <!-- Certifications -->
+                <div class="work-card" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white;">
+                    <h3>✅ Current Certifications</h3>
+                    <ul><li>📋 Microsoft Office Specialist 2019 (Word, Excel, PowerPoint, Outlook)</li></ul>
                 </div>
-                
-                <div class="work-card" style="background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
-                    <h3 style="color: white;">🎯 In Progress / Planned</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; color: white;">💪 NASM (National Academy of Sports Medicine) Certification</li>
-                        <li style="padding: 0.5rem 0; color: white;">🚑 CPR/First Aid Certification</li>
-                        <li style="padding: 0.5rem 0; color: white;">⚡ AED (Automated External Defibrillator)</li>
-                    </ul>
+                <!-- Planned -->
+                <div class="work-card" style="background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); color: white;">
+                    <h3>🎯 In Progress / Planned</h3>
+                    <ul><li>💪 NASM Certification</li><li>🚑 CPR/First Aid Certification</li><li>⚡ AED</li></ul>
                 </div>
-                
-                <div class="work-card" style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
-                    <h3 style="color: white;">💻 Technical Skills</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; color: white;"><strong>Programming:</strong> Java, Python (Tkinter GUI development)</li>
-                        <li style="padding: 0.5rem 0; color: white;"><strong>Hardware:</strong> Precision Soldering, Circuit Integration, Equipment Calibration</li>
-                        <li style="padding: 0.5rem 0; color: white;"><strong>Research Tools:</strong> SensorFish Technology, HBET, ROV Systems, Data Acquisition Systems</li>
-                        <li style="padding: 0.5rem 0; color: white;"><strong>Specializations:</strong> AI/ML (LLMs, LNS), Environmental Sensor Data Analysis</li>
-                    </ul>
+                <!-- Skills -->
+                <div class="work-card" style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white;">
+                    <h3>💻 Technical Skills</h3>
+                    <ul><li><strong>Programming:</strong> Java, Python (Tkinter GUI)</li><li><strong>Hardware:</strong> Precision Soldering, Circuit Integration</li><li><strong>Research Tools:</strong> SensorFish Tech, HBET, ROV Systems</li><li><strong>Specializations:</strong> AI/ML (LLMs, LNS)</li></ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio -->
     <section id="portfolio">
         <div class="section-content">
             <h2 class="section-title">My Portfolio</h2>
-            
-            <!-- Featured Projects Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
-                
-                <!-- PenguinBudget Project -->
-                <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;" 
-                     onmouseover="this.style.transform='scale(1.05)'" 
-                     onmouseout="this.style.transform='scale(1)'">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin:auto;">
+                <!-- Project 1 -->
+                <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 20px; overflow: hidden;">
                     <div style="padding: 2rem; color: #1a1a1a;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="font-size: 2.5rem;">🐧</span>
-                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">PenguinBudget</h3>
-                        </div>
-                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500;">Smart Personal Finance Tracker</p>
-                        <p style="margin-bottom: 2rem; opacity: 0.9;">A modern, intuitive budgeting application designed to help users track income, expenses, and financial goals with real-time analytics and beautiful visualizations.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
-                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
-                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">HTML/CSS</span>
-                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Financial Analytics</span>
-                        </div>
-                        <a href="https://budgeting-3mi.pages.dev" target="_blank" 
-                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
-                           onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
-                            View Live Project 
-                            <span style="font-size: 1.2rem;">→</span>
-                        </a>
+                        <h3>🐧 PenguinBudget</h3>
+                        <p>Smart Personal Finance Tracker</p>
+                        <p>A modern, intuitive budgeting app...</p>
+                        <a href="https://budgeting-3mi.pages.dev" target="_blank">View Live Project →</a>
                     </div>
                 </div>
-
-                <!-- GymTracker Coming Soon -->
-                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); position: relative;">
+                <!-- Project 2 -->
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px;">
                     <div style="padding: 2rem; color: white;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="font-size: 2.5rem;">💪</span>
-                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">GymTracker Pro</h3>
-                        </div>
-                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500; opacity: 0.9;">All-in-One Fitness & Nutrition Companion</p>
-                        <p style="margin-bottom: 2rem; opacity: 0.8;">A comprehensive gym companion app for tracking workouts, PRs, body measurements, and progress photos. PLUS integrated calorie tracking because nobody wants to juggle multiple apps! Features exercise library, custom workout plans, nutrition database, and progress analytics all in one place.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">React</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Node.js</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">MongoDB</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Chart.js</span>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.15); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; display: inline-block; font-weight: 600;">
-                            🔨 Coming Soon
-                        </div>
-                    </div>
-                    <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center;">
-                        <span style="color: white; font-size: 1.2rem; font-weight: 600; background: rgba(0, 0, 0, 0.5); padding: 1rem 2rem; border-radius: 10px;">In Development</span>
+                        <h3>💪 GymTracker Pro</h3>
+                        <p>All-in-One Fitness & Nutrition Companion</p>
+                        <p>A comprehensive gym companion app...</p>
+                        <div>🔨 Coming Soon</div>
                     </div>
                 </div>
             </div>
-
-            <!-- More Projects Section -->
-            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden;">
-                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 50%;"></div>
-                <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--electric-purple)); opacity: 0.1; border-radius: 50%;"></div>
-                
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">More Projects Coming Soon</h3>
-                <p style="color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Currently working on web applications and personal side projects for friends. Always building something new and helping others bring their ideas to life! 😊
-                </p>
-                
-                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3+</div>
-                        <div style="color: var(--muted-text); font-size: 0.9rem;">Projects in Progress</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--secondary), var(--electric-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</div>
-                        <div style="color: var(--muted-text); font-size: 0.9rem;">Happy Clients/Friends</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
-                        <div style="color: var(--muted-text); font-size: 0.9rem;">Always Learning</div>
-                    </div>
-                </div>
+            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center;">
+                <h3>More Projects Coming Soon</h3>
+                <p>Currently working on web apps and personal side projects...</p>
             </div>
         </div>
     </section>
 
     <!-- Publications -->
-    <section id="publications" style="background: var(--dark-section);">
+    <section id="publications">
         <div class="section-content">
             <h2 class="section-title">Publications</h2>
-            
             <div class="publication-box" style="background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);">
-                <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
-                <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
-                <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
-                <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
-                <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank" style="color: white; text-decoration: underline; font-weight: 500;">View Publication →</a></p>
+                <h3>📚 Bridging the Gap Between LLMs and LNS</h3>
+                <p><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, A. Li, et al.</p>
+                <p><strong>Published in:</strong> MICRO 2024, Austin, TX</p>
+                <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank">View Publication →</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="section-content">
-            <h2 class="section-title" style="color: white;">Let's Connect!</h2>
-            <p style="color: var(--muted-text);">Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
-            
+            <h2 class="section-title">Let's Connect!</h2>
+            <p>Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
             <div class="contact-links">
                 <a href="mailto:andrew.gui2006@gmail.com">📧 Email</a>
                 <a href="https://www.linkedin.com/in/andrew-gui-32a386280/" target="_blank">💼 LinkedIn</a>
@@ -866,41 +273,7 @@
         </div>
     </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease-out';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.research-card, .fitness-card, .work-card, .publication-box').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // Add hover effect for portfolio cards
-        document.querySelectorAll('#portfolio > div > div').forEach(card => {
-            if (card.style.background && card.style.background.includes('gradient')) {
-                observer.observe(card);
-            }
-        });
-    </script>
+    <!-- External JavaScript -->
+    <script src="app.js"></script>
 </body>
 </html>
