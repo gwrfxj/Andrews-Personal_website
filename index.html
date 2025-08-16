@@ -149,7 +149,8 @@
             background: var(--dark-section);
         }
         
-        section:nth-child(even) {
+        /* Specific sections with dark background for alternating pattern */
+        #stem, #work, #portfolio, #contact {
             background: var(--dark-bg);
         }
         
@@ -477,6 +478,10 @@
             .timeline {
                 padding-left: 2rem;
             }
+            
+            #portfolio > .section-content > div:first-child {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -490,6 +495,7 @@
             <li><a href="#fitness">Fitness</a></li>
             <li><a href="#work">Experience</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -632,7 +638,7 @@
             <!-- Boxing Feature Section -->
             <div style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); color: white; padding: 3rem; border-radius: 20px; margin: 3rem 0; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
                 <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🥊 UW BOXING TEAM 🥊</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Proud member of the University of Washington Boxing Team</p>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Pride. Poise. Team. Family.</p>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                     <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingTeamPhoto.JPG"
                          alt="Boxing team group photo"
@@ -642,7 +648,7 @@
                          alt="Personal boxing portrait"
                          style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
                 </div>
-                <p style="margin-top: 2rem; font-size: 1.1rem;">Boxing isn't just about physical strength - it's about discipline, strategy, and mental toughness. These skills translate directly to my academic and professional life. Go Huskies! 💜💛</p>
+                <p style="margin-top: 2rem; font-size: 1.1rem;">As I grow and learn, I've realized boxing isn't just physical strength - it's about discipline, strategy, and mental toughness. These skills have directly translated to my academic and professional life, and I cannot thank my team leads, coaches, and peers enough. 💜💛</p>
             </div>
 
             <!-- Training Split Section -->
@@ -744,8 +750,95 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-content">
+            <h2 class="section-title">My Portfolio</h2>
+            
+            <!-- Featured Projects Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                
+                <!-- PenguinBudget Project -->
+                <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;" 
+                     onmouseover="this.style.transform='scale(1.05)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                    <div style="padding: 2rem; color: #1a1a1a;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem;">🐧</span>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">PenguinBudget</h3>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500;">Smart Personal Finance Tracker</p>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">A modern, intuitive budgeting application designed to help users track income, expenses, and financial goals with real-time analytics and beautiful visualizations.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">HTML/CSS</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Financial Analytics</span>
+                        </div>
+                        <a href="https://budgeting-3mi.pages.dev" target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                           onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                            View Live Project 
+                            <span style="font-size: 1.2rem;">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GymTracker Coming Soon -->
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); position: relative;">
+                    <div style="padding: 2rem; color: white;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem;">💪</span>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">GymTracker Pro</h3>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500; opacity: 0.9;">All-in-One Fitness & Nutrition Companion</p>
+                        <p style="margin-bottom: 2rem; opacity: 0.8;">A comprehensive gym companion app for tracking workouts, PRs, body measurements, and progress photos. PLUS integrated calorie tracking because nobody wants to juggle multiple apps! Features exercise library, custom workout plans, nutrition database, and progress analytics all in one place.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">React</span>
+                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Node.js</span>
+                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">MongoDB</span>
+                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Chart.js</span>
+                        </div>
+                        <div style="background: rgba(255, 255, 255, 0.15); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; display: inline-block; font-weight: 600;">
+                            🔨 Coming Soon
+                        </div>
+                    </div>
+                    <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center;">
+                        <span style="color: white; font-size: 1.2rem; font-weight: 600; background: rgba(0, 0, 0, 0.5); padding: 1rem 2rem; border-radius: 10px;">In Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Projects Section -->
+            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--electric-purple)); opacity: 0.1; border-radius: 50%;"></div>
+                
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">More Projects Coming Soon</h3>
+                <p style="color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Currently working on web applications and personal side projects for friends. Always building something new and helping others bring their ideas to life! 😊
+                </p>
+                
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3+</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Projects in Progress</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--secondary), var(--electric-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Happy Clients/Friends</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Always Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications -->
-    <section id="publications">
+    <section id="publications" style="background: var(--dark-section);">
         <div class="section-content">
             <h2 class="section-title">Publications</h2>
             
@@ -800,6 +893,13 @@
 
         document.querySelectorAll('.research-card, .fitness-card, .work-card, .publication-box').forEach(el => {
             observer.observe(el);
+        });
+        
+        // Add hover effect for portfolio cards
+        document.querySelectorAll('#portfolio > div > div').forEach(card => {
+            if (card.style.background && card.style.background.includes('gradient')) {
+                observer.observe(card);
+            }
         });
     </script>
 </body>
