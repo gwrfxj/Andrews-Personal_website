@@ -312,28 +312,32 @@
                     </div>
                 </div>
 
-                <!-- GymTracker Coming Soon -->
-                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); position: relative;">
-                    <div style="padding: 2rem; color: white;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <span style="font-size: 2.5rem;">💪</span>
-                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">GymTracker Pro</h3>
-                        </div>
-                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500; opacity: 0.9;">All-in-One Fitness & Nutrition Companion</p>
-                        <p style="margin-bottom: 2rem; opacity: 0.8;">A comprehensive gym companion app for tracking workouts, PRs, body measurements, and progress photos. PLUS integrated calorie tracking because nobody wants to juggle multiple apps! Features exercise library, custom workout plans, nutrition database, and progress analytics all in one place.</p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">React</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Node.js</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">MongoDB</span>
-                            <span style="background: rgba(255, 255, 255, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem;">Chart.js</span>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.15); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; display: inline-block; font-weight: 600;">
-                            🔨 Coming Soon
-                        </div>
+                <!-- GymTracker Pro (Open Beta) -->
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'">
+                  <div style="padding: 2rem; color: white;">
+                    <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+                      <span style="font-size:2.5rem;">💪</span>
+                      <h3 style="font-size:1.8rem; font-weight:700; margin:0; display:flex; align-items:center; gap:8px;">
+                        GymTracker Pro <span class="beta-label">BETA</span>
+                      </h3>
                     </div>
-                    <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(2px); display: flex; align-items: center; justify-content: center;">
-                        <span style="color: white; font-size: 1.2rem; font-weight: 600; background: rgba(0, 0, 0, 0.5); padding: 1rem 2rem; border-radius: 10px;">In Development</span>
+                    <p style="margin-bottom:1.5rem; font-size:1.1rem; font-weight:500; opacity:0.95;">All‑in‑One Fitness & Nutrition Companion</p>
+                    <p style="margin-bottom:2rem; opacity:0.9;">Track workouts, PRs, measurements, progress photos, and calories in one app. This is an early development build — features may change and data may reset during updates.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">JavaScript</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">HTML</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">CSS</span>
                     </div>
+                    <a href="https://gymtracker-pro.pages.dev/" target="_blank"
+                       style="display:inline-flex; align-items:center; gap:0.5rem; background: rgba(0,0,0,0.3); color:white; padding:0.8rem 1.5rem; border-radius:10px; text-decoration:none; font-weight:600; transition: all 0.3s;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                       onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                      Open Beta <span style="font-size:1.2rem;">→</span>
+                    </a>
+                    <div style="margin-top:0.75rem; font-size:0.9rem; opacity:0.8;">Status: Early Development (features shipping fast)</div>
+                  </div>
                 </div>
             </div>
 
