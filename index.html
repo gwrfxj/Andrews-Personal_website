@@ -1,662 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#DC2626" />
-  <title>GymTracker Pro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Gui - Portfolio</title>
+    
+    <!-- Professional Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50%' x='50%' text-anchor='middle' font-size='60'>🐢</text></svg>"
-  />
-
-  <!-- Font Awesome for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Main App Container -->
-  <div id="app">
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-      <div class="loading-content">
-        <div class="turtle-loader">🐢</div>
-        <h2>GymTracker Pro</h2>
-        <div class="loading-bar">
-          <div class="loading-progress"></div>
-        </div>
-        <p>Getting your gains ready...</p>
-      </div>
-    </div>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stem">Research</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Auth Container -->
-    <div id="auth-container" class="auth-container" style="display: none;">
-      <div class="auth-card">
-        <!-- Animated Background Elements -->
-        <div class="animated-bg">
-          <div class="floating-dumbbell">🏋️</div>
-          <div class="floating-muscle">💪</div>
-          <div class="floating-fire">🔥</div>
-        </div>
-
-        <!-- Logo Section -->
-        <div class="auth-logo">
-          <div class="logo-mascot">
-            <span class="turtle-emoji">🐢</span>
-            <div class="muscle-arms">💪</div>
-          </div>
-          <h1 class="app-title">
-            <span class="title-gym">GYM</span>
-            <span class="title-tracker">TRACKER</span>
-            <span class="title-pro">PRO</span>
-          </h1>
-          <p class="tagline">Slow and Steady Wins the Gains</p>
-        </div>
-
-        <!-- Auth Tabs -->
-        <div class="auth-tabs">
-          <button id="login-tab" class="tab-btn active" onclick="showLogin()">
-            <i class="fas fa-sign-in-alt"></i> Login
-          </button>
-          <button id="signup-tab" class="tab-btn" onclick="showSignup()">
-            <i class="fas fa-user-plus"></i> Sign Up
-          </button>
-        </div>
-
-        <!-- Auth Forms -->
-        <div id="auth-form" class="auth-form">
-          <!-- Login Form (default) -->
-          <div id="login-form" class="form-content">
-            <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="email" id="login-email" placeholder="Email" required />
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="hero-content">
+            <h1>Andrew Gui</h1>
+            <p class="tagline">Electrical & Computer Engineering • Research • Innovation</p>
+            <div class="badges">
+                <span class="badge">⚡ Electrical and Computer Engineer</span>
+                <span class="badge">🔬 Research Intern</span>
+                <span class="badge">🥊 UW Boxing Team</span>
+                <span class="badge">🚤 Watersports Fanatic</span>
+                <span class="badge">💪 Fitness Enthusiast</span>
             </div>
-            <div class="input-group">
-              <i class="fas fa-lock"></i>
-              <input type="password" id="login-password" placeholder="Password" required />
+        </div>
+    </section>
+
+    <!-- About Section - COMPLETELY REDESIGNED -->
+    <section id="about">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-container">
+                <!-- Left: Image -->
+                <div class="about-image-wrapper">
+                    <img src="Profile.jpg" alt="Andrew Gui" class="about-image">
+                </div>
+                
+                <!-- Right: Text Content -->
+                <div class="about-text">
+                    <p>
+                        My journey in engineering stems from a simple childhood fascination: how does a collection of metal and plastic have the capability to call a friend halfway around the world? This curiosity has given me the drive to aggressively attempt to jumpstart my career and pursue hands-on experience. Shown from the fact I'd graduated as a valedictorian in high school a year early, and secured competitive internships at Pacific Northwest National Laboratory (PNNL). Currently, I work as an Undergraduate Technical Intern - Electrical Engineer at PNNL, where I calibrate and test SensorFish devices, autonomous sensors that withstand brutal dam turbine forces while collecting precise fish passage data, analyze the collected data to characterize fish passage conditions, and perform precision soldering to create custom electrical connections between the autonomous devices and computer systems. I've also co-authored research on optimizing Large Language Model hardware using Logarithmic Number Systems, exploring how computational efficiency can be revolutionized through hardware-software integration. Now pursuing Electrical and Computer Engineering at the University of Washington, I'm focused on building the skills to create major impacts on every project I touch.
+                    </p>
+                    
+                    <p>
+                        However, what sets me apart isn't just technical capability, it's my interdisciplinary mindset that innovation only happens when boundaries are broken and the impossible becomes possible in the real world. This philosophy extends far beyond STEM. Whether I'm finding the most energy-efficient combinations in boxing as part of UW's Boxing Team, developing the systematic approach that helped me lose 100 pounds in 8 months, I approach every challenge with creative problem-solving skills and unwavering determination. With that, engineering excites me because it's the art of making what seems impossible work under brutal, unforgiving conditions, and I understand that breakthrough results, whether in engineering or personal challenges, come from applying brains over brawn.
+                    </p>
+                </div>
             </div>
-            <button class="auth-btn primary-btn" onclick="handleLogin()">
-              <span>Start Training</span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <p class="auth-helper">
-              Forgot password? <a href="#" onclick="handleForgotPassword()">Reset it</a>
+        </div>
+    </section>
+
+    <!-- STEM/Research Section -->
+    <section id="stem">
+        <div class="section-content">
+            <h2 class="section-title">Research & STEM Journey</h2>
+            
+            <div class="research-card">
+                <h3>🔬 Current Research: SensorFish Technology at PNNL</h3>
+                <p>Working as an Undergraduate Technical Intern - Electrical Engineering, I analyze autonomous SensorFish and Mini SensorFish data to characterize fish passage conditions through dams. This involves extensive field testing, calibration, and precision soldering to create custom electrical connections between the autonomous devices and computer systems. I also develop Python/Tkinter GUI applications for data analysis and visualization, while researching equipment upgrades to modernize legacy data acquisition systems—effectively bridging hands-on hardware integration with modern computational analysis platforms.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python/Tkinter</span>
+                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">Hardware Testing</span>
+                    <span class="tech-badge">HBET</span>
+                    <span class="tech-badge">Precision Soldering</span>
+                    <span class="tech-badge">Circuit Integration</span>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <h3>💻 AI Hardware</h3>
+                <p>Co-authored research optimizing Large Language Models through Logarithmic Number System (LNS) implementations. Conducted comparative performance analysis of LNS vs. Floating Point architectures, contributing to next-generation AI hardware design and computational efficiency breakthroughs.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">Architecture Codesign</span>
+                    <span class="tech-badge">Performance Optimization</span>
+                    <span class="tech-badge">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Section -->
+    <section id="fitness">
+        <div class="section-content">
+            <!-- Gym Progress Section -->
+            <h3 style="text-align: center; margin: 3rem 0 1rem; font-size: 1.8rem; color: var(--light-text);">
+                Fitness Journey 🏋️
+            </h3>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: #aaa; font-size: 1rem;">
+                Through sheer will and determination, I transformed my health and fitness — here's the journey so far.
             </p>
-          </div>
-
-          <!-- Signup Form (hidden by default) -->
-          <div id="signup-form" class="form-content" style="display: none;">
-            <div class="input-group">
-              <i class="fas fa-user"></i>
-              <input type="text" id="signup-name" placeholder="Your Name" required />
-            </div>
-            <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="email" id="signup-email" placeholder="Email" required />
-            </div>
-            <div class="input-group">
-              <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                id="signup-password"
-                placeholder="Password (min 6 characters)"
-                required
-              />
-            </div>
-            <button class="auth-btn primary-btn" onclick="handleSignup()">
-              <span>Join the Pack</span>
-              <i class="fas fa-rocket"></i>
-            </button>
-            <p class="auth-helper">
-              Already crushing it? <a href="#" onclick="showLogin()">Login here</a>
-            </p>
-          </div>
-        </div>
-
-        <!-- Social Login Options -->
-        <div class="social-auth">
-          <div class="divider"><span>OR</span></div>
-          <button class="social-btn google-btn" onclick="handleGoogleLogin()">
-            <i class="fab fa-google"></i>
-            <span>Continue with Google</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Dashboard -->
-    <div id="main-dashboard" class="main-dashboard" style="display: none;">
-      <!-- Header -->
-      <header class="dashboard-header">
-        <div class="header-left">
-          <div class="logo-small">
-            <span class="turtle-small">🐢</span>
-            <span class="brand-name">GymTracker Pro</span>
-          </div>
-        </div>
-        <div class="header-center">
-          <h2 id="welcome-message">Welcome back, <span id="user-name">Champion</span>!</h2>
-        </div>
-        <div class="header-right">
-          <button class="notification-btn" onclick="toggleNotifications()">
-            <i class="fas fa-bell"></i>
-            <span class="notification-badge">3</span>
-          </button>
-          <button class="profile-btn" onclick="toggleProfile()">
-            <i class="fas fa-user-circle"></i>
-          </button>
-          <button class="logout-btn" onclick="handleLogout()">
-            <i class="fas fa-sign-out-alt"></i>
-          </button>
-        </div>
-      </header>
-
-      <!-- Main Selection Screen -->
-      <div id="main-selection" class="main-selection">
-        <div class="selection-container">
-          <h1 class="selection-title">What's the plan today?</h1>
-
-          <div class="selection-cards">
-            <!-- Workout Card -->
-            <div class="selection-card workout-card" onclick="openWorkoutSection()">
-              <div class="card-background"></div>
-              <div class="card-content">
-                <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
-                <h2>WORKOUT</h2>
-                <p>Track exercises, PRs, and progress</p>
-                <div class="card-stats">
-                  <span><i class="fas fa-fire"></i> 7 day streak</span>
-                  <span><i class="fas fa-trophy"></i> 3 PRs this week</span>
-                </div>
-                <button class="card-btn">
-                  <span>Let's Train</span>
-                  <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- Calorie Tracker Card -->
-            <div class="selection-card calorie-card" onclick="openCalorieSection()">
-              <div class="card-background"></div>
-              <div class="card-content">
-                <div class="card-icon"><i class="fas fa-utensils"></i></div>
-                <h2>CALORIES</h2>
-                <p>Monitor nutrition and diet goals</p>
-                <div class="card-stats">
-                  <span><i class="fas fa-chart-line"></i> 2,100 today</span>
-                  <span><i class="fas fa-bullseye"></i> On target</span>
-                </div>
-                <button class="card-btn">
-                  <span>Track Food</span>
-                  <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Stats -->
-          <div class="quick-stats">
-            <div class="stat-card">
-              <i class="fas fa-calendar-check"></i>
-              <div class="stat-info">
-                <span class="stat-value" id="total-workouts">0</span>
-                <span class="stat-label">Total Workouts</span>
-              </div>
-            </div>
-            <div class="stat-card">
-              <i class="fas fa-weight"></i>
-              <div class="stat-info">
-                <span class="stat-value" id="total-weight">0 lbs</span>
-                <span class="stat-label">Weight Lifted</span>
-              </div>
-            </div>
-            <div class="stat-card">
-              <i class="fas fa-medal"></i>
-              <div class="stat-info">
-                <span class="stat-value" id="total-prs">0</span>
-                <span class="stat-label">Personal Records</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Workout Section -->
-      <div id="workout-section" class="workout-section" style="display: none;">
-        <!-- Workout Header -->
-        <div class="workout-header">
-          <button class="back-btn" onclick="backToMainSelection()">
-            <i class="fas fa-arrow-left"></i>
-            <span>Back</span>
-          </button>
-          <div class="workout-title">
-            <h1>WORKOUT ZONE</h1>
-            <div class="turtle-mascot"><span class="buff-turtle">🐢💪</span></div>
-          </div>
-          <div class="workout-date"><span id="current-date"></span></div>
-        </div>
-
-        <!-- Workout Tabs -->
-        <div class="workout-tabs">
-          <button class="workout-tab active" onclick="switchWorkoutTab('muscles')" data-tab="muscles">
-            <i class="fas fa-body"></i>
-            <span>Muscle Map</span>
-          </button>
-          <button class="workout-tab" onclick="switchWorkoutTab('workout')" data-tab="workout">
-            <i class="fas fa-dumbbell"></i>
-            <span>Workout</span>
-          </button>
-          <button class="workout-tab" onclick="switchWorkoutTab('progress')" data-tab="progress">
-            <i class="fas fa-chart-line"></i>
-            <span>Progress</span>
-          </button>
-          <button class="workout-tab" onclick="switchWorkoutTab('library')" data-tab="library">
-            <i class="fas fa-book"></i>
-            <span>Exercise Library</span>
-          </button>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="workout-content">
-          <!-- Muscle Map Tab -->
-          <div id="muscles-tab" class="tab-content active">
-            <div class="muscle-map-container">
-              <h2>Weekly Muscle Activity</h2>
-              <p class="muscle-map-subtitle">Muscles worked this week (resets Sunday)</p>
-
-              <!-- Body Graph -->
-              <div class="body-graph">
-                <div class="body-view front-view">
-                  <svg viewBox="0 0 200 400" class="body-svg">
-                    <g id="front-muscles">
-                      <ellipse cx="100" cy="40" rx="25" ry="30" class="muscle-group" data-muscle="neck"></ellipse>
-                      <ellipse cx="60" cy="90" rx="20" ry="15" class="muscle-group" data-muscle="front-delts"></ellipse>
-                      <ellipse cx="140" cy="90" rx="20" ry="15" class="muscle-group" data-muscle="front-delts"></ellipse>
-                      <path d="M 70 100 Q 100 110 130 100 L 120 140 L 80 140 Z" class="muscle-group" data-muscle="chest"></path>
-                      <rect x="35" y="100" width="20" height="60" rx="10" class="muscle-group" data-muscle="biceps"></rect>
-                      <rect x="145" y="100" width="20" height="60" rx="10" class="muscle-group" data-muscle="biceps"></rect>
-                      <rect x="30" y="165" width="20" height="50" rx="10" class="muscle-group" data-muscle="forearms"></rect>
-                      <rect x="150" y="165" width="20" height="50" rx="10" class="muscle-group" data-muscle="forearms"></rect>
-                      <rect x="85" y="145" width="30" height="60" rx="5" class="muscle-group" data-muscle="abs"></rect>
-                      <rect x="75" y="210" width="20" height="80" rx="10" class="muscle-group" data-muscle="quads"></rect>
-                      <rect x="105" y="210" width="20" height="80" rx="10" class="muscle-group" data-muscle="quads"></rect>
-                      <rect x="75" y="295" width="18" height="60" rx="9" class="muscle-group" data-muscle="calves"></rect>
-                      <rect x="107" y="295" width="18" height="60" rx="9" class="muscle-group" data-muscle="calves"></rect>
-                    </g>
-                  </svg>
-                  <p class="view-label">Front</p>
-                </div>
-
-                <div class="body-view back-view">
-                  <svg viewBox="0 0 200 400" class="body-svg">
-                    <g id="back-muscles">
-                      <ellipse cx="100" cy="40" rx="25" ry="30" class="muscle-group" data-muscle="traps"></ellipse>
-                      <ellipse cx="60" cy="90" rx="20" ry="15" class="muscle-group" data-muscle="rear-delts"></ellipse>
-                      <ellipse cx="140" cy="90" rx="20" ry="15" class="muscle-group" data-muscle="rear-delts"></ellipse>
-                      <path d="M 70 100 Q 100 105 130 100 L 125 160 L 75 160 Z" class="muscle-group" data-muscle="lats"></path>
-                      <rect x="85" y="100" width="30" height="50" rx="5" class="muscle-group" data-muscle="mid-back"></rect>
-                      <rect x="35" y="100" width="20" height="60" rx="10" class="muscle-group" data-muscle="triceps"></rect>
-                      <rect x="145" y="100" width="20" height="60" rx="10" class="muscle-group" data-muscle="triceps"></rect>
-                      <rect x="85" y="165" width="30" height="40" rx="5" class="muscle-group" data-muscle="lower-back"></rect>
-                      <ellipse cx="100" cy="220" rx="35" ry="20" class="muscle-group" data-muscle="glutes"></ellipse>
-                      <rect x="75" y="240" width="20" height="60" rx="10" class="muscle-group" data-muscle="hamstrings"></rect>
-                      <rect x="105" y="240" width="20" height="60" rx="10" class="muscle-group" data-muscle="hamstrings"></rect>
-                      <rect x="75" y="305" width="18" height="50" rx="9" class="muscle-group" data-muscle="calves"></rect>
-                      <rect x="107" y="305" width="18" height="50" rx="9" class="muscle-group" data-muscle="calves"></rect>
-                    </g>
-                  </svg>
-                  <p class="view-label">Back</p>
-                </div>
-              </div>
-
-              <!-- Muscle Groups List -->
-              <div class="muscle-groups">
-                <h3>Muscle Groups Worked</h3>
-                <div class="muscle-categories">
-                  <!-- Arms -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-hand-rock"></i> Arms</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="biceps">
-                        <span class="muscle-indicator"></span>
-                        <span>Biceps</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="triceps">
-                        <span class="muscle-indicator"></span>
-                        <span>Triceps</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="forearms">
-                        <span class="muscle-indicator"></span>
-                        <span>Forearms</span>
-                      </div>
+            
+            <div class="fitness-gallery">
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Beginning.jpg"
+                         alt="Beginning of fitness journey"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>The Beginning</h3>
+                        <p>2023 - Where it all started, being at 300 lbs.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
                     </div>
-                  </div>
-
-                  <!-- Legs -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-running"></i> Legs</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="quads">
-                        <span class="muscle-indicator"></span>
-                        <span>Quadriceps</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="hamstrings">
-                        <span class="muscle-indicator"></span>
-                        <span>Hamstrings</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="calves">
-                        <span class="muscle-indicator"></span>
-                        <span>Calves</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="glutes">
-                        <span class="muscle-indicator"></span>
-                        <span>Glutes</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Shoulders -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-arrows-alt-h"></i> Shoulders</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="front-delts">
-                        <span class="muscle-indicator"></span>
-                        <span>Front Delts</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="side-delts">
-                        <span class="muscle-indicator"></span>
-                        <span>Side Delts</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="rear-delts">
-                        <span class="muscle-indicator"></span>
-                        <span>Rear Delts</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Chest -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-heart"></i> Chest</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="chest">
-                        <span class="muscle-indicator"></span>
-                        <span>Pectorals</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Back -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-arrow-left"></i> Back</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="lats">
-                        <span class="muscle-indicator"></span>
-                        <span>Lats</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="mid-back">
-                        <span class="muscle-indicator"></span>
-                        <span>Mid Back</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="lower-back">
-                        <span class="muscle-indicator"></span>
-                        <span>Lower Back</span>
-                      </div>
-                      <div class="muscle-item" data-muscle="traps">
-                        <span class="muscle-indicator"></span>
-                        <span>Traps</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Core -->
-                  <div class="muscle-category">
-                    <h4><i class="fas fa-circle"></i> Core</h4>
-                    <div class="muscle-list">
-                      <div class="muscle-item" data-muscle="abs">
-                        <span class="muscle-indicator"></span>
-                        <span>Abs</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Mid-Journey.jpg"
+                         alt="Mid-point of fitness journey"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Building Momentum</h3>
+                        <p>2024 - Consistency paying off, seeing real changes and getting stronger</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/CurrentGymMe.jpg"
+                         alt="Current gym progress photo"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Current Status</h3>
+                        <p>2025 - Stronger than ever, fitness is now a lifestyle, not just a goal</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/ActionPhoto.jpg"
+                         alt="Daily workout grind action shot"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Daily Grind</h3>
+                        <p>Every day is an opportunity to become better than yesterday</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <!-- Workout Tab -->
-          <div id="workout-tab" class="tab-content">
-            <div class="workout-container">
-              <!-- Workout Controls -->
-              <div class="workout-controls">
-                <button class="start-workout-btn" onclick="startWorkout()">
-                  <i class="fas fa-play"></i>
-                  <span>Start New Workout</span>
-                </button>
-                <button class="routine-btn" onclick="showRoutines()">
-                  <i class="fas fa-list"></i>
-                  <span>My Routines</span>
-                </button>
-              </div>
-
-              <!-- Active Workout -->
-              <div id="active-workout" class="active-workout" style="display: none;">
-                <div class="workout-timer">
-                  <i class="fas fa-clock"></i>
-                  <span id="workout-timer">00:00:00</span>
+            
+            <!-- Boxing Feature Section -->
+            <div style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); color: white; padding: 3rem; border-radius: 20px; margin: 3rem 0; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🥊 UW BOXING TEAM 🥊</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Pride. Poise. Team. Family.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingTeamPhoto.JPG"
+                         alt="Boxing team group photo"
+                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
+                    
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingPhoto.JPG"
+                         alt="Personal boxing portrait"
+                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
                 </div>
-
-                <div class="exercises-list" id="exercises-list"></div>
-
-                <div class="workout-actions">
-                  <button class="add-exercise-btn" onclick="addExercise()">
-                    <i class="fas fa-plus"></i>
-                    <span>Add Exercise</span>
-                  </button>
-                  <button class="finish-workout-btn" onclick="finishWorkout()">
-                    <i class="fas fa-check"></i>
-                    <span>Finish Workout</span>
-                  </button>
-                  <button class="cancel-workout-btn" onclick="cancelWorkout()">
-                    <i class="fas fa-times"></i>
-                    <span>Cancel</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Workout History -->
-              <div class="workout-history">
-                <h3>Recent Workouts</h3>
-                <div id="history-list" class="history-list"></div>
-              </div>
-
-              <!-- Routines Modal -->
-              <div id="routines-modal" class="modal" style="display: none;">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h2>My Workout Routines</h2>
-                    <button class="close-modal" onclick="closeRoutinesModal()">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <button class="create-routine-btn" onclick="createRoutine()">
-                      <i class="fas fa-plus"></i>
-                      <span>Create New Routine</span>
-                    </button>
-                    <div id="routines-list" class="routines-list"></div>
-                  </div>
-                </div>
-              </div>
+                <p style="margin-top: 2rem; font-size: 1.1rem;">As I grow and learn, I've realized boxing isn't just physical strength - it's about discipline, strategy, and mental toughness. These skills have directly translated to my academic and professional life, and I cannot thank my team leads, coaches, and peers enough. 💜💛</p>
             </div>
-          </div>
 
-          <!-- Progress Tab -->
-          <div id="progress-tab" class="tab-content">
-            <div class="progress-container">
-              <!-- PRs Section -->
-              <div class="prs-section">
-                <h3><i class="fas fa-trophy"></i> Personal Records</h3>
-                <div id="prs-list" class="prs-list"></div>
-                <button class="add-pr-btn" onclick="addPR()">
-                  <i class="fas fa-plus"></i>
-                  <span>Add PR</span>
-                </button>
-              </div>
-
-              <!-- Photo Progress -->
-              <div class="photo-progress">
-                <h3><i class="fas fa-camera"></i> Photo Progress <span class="photo-cap">(20 max photos)</span></h3>
-
-                <!-- Photo grid (JS fills this) -->
-                <div class="photo-grid" id="progress-photos"></div>
-
-                <!-- Add Photo button opens a tiny chooser -->
-                <div class="photo-actions" style="position: relative; display: inline-block;">
-                  <button class="add-photo-btn" type="button" onclick="addProgressPhoto()">
-                    <i class="fas fa-camera"></i>
-                    <span>Add Photo</span>
-                  </button>
-
-                  <!-- Tiny chooser (hidden by default) -->
-                  <div id="photo-source-chooser"
-                       style="display:none; position:absolute; top:110%; left:0; background:#0b0b0b; border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:8px; min-width:200px; z-index:9999; box-shadow:0 8px 24px rgba(0,0,0,0.35);">
-                    <button type="button"
-                            onclick="openCamera()"
-                            style="width:100%; padding:10px 12px; background:#111; color:#fff; border:1px solid rgba(255,255,255,0.12); border-radius:8px; margin:2px 0; text-align:left;">
-                      📷 Take Photo (Camera)
-                    </button>
-                    <button type="button"
-                            onclick="openLibrary()"
-                            style="width:100%; padding:10px 12px; background:#111; color:#fff; border:1px solid rgba(255,255,255,0.12); border-radius:8px; margin:2px 0; text-align:left;">
-                      🖼️ Choose from Library
-                    </button>
-                  </div>
+            <!-- Training Split Section -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🥊 Boxing Training</h3>
+                    <p style="color: var(--muted-text);">Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p>
                 </div>
-
-                <!-- Hidden file inputs (camera vs library) -->
-                <input id="photo-input-camera" type="file" accept="image/*" capture="environment" style="display:none">
-                <input id="photo-input-library" type="file" accept="image/*" style="display:none">
-              </div>
-
-              <!-- Body Measurements -->
-              <div class="measurements-section">
-                <h3><i class="fas fa-ruler"></i> Body Measurements</h3>
-                <div class="measurements-grid">
-                  <div class="measurement-item">
-                    <label>Weight</label>
-                    <input type="number" id="weight-input" placeholder="lbs" />
-                  </div>
-                  <div class="measurement-item">
-                    <label>Chest</label>
-                    <input type="number" id="chest-input" placeholder="inches" />
-                  </div>
-                  <div class="measurement-item">
-                    <label>Waist</label>
-                    <input type="number" id="waist-input" placeholder="inches" />
-                  </div>
-                  <div class="measurement-item">
-                    <label>Arms</label>
-                    <input type="number" id="arms-input" placeholder="inches" />
-                  </div>
-                  <div class="measurement-item">
-                    <label>Thighs</label>
-                    <input type="number" id="thighs-input" placeholder="inches" />
-                  </div>
-                  <div class="measurement-item">
-                    <label>Calves</label>
-                    <input type="number" id="calves-input" placeholder="inches" />
-                  </div>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">💪 Strength Training</h3>
+                    <p style="color: var(--muted-text);">Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p>
                 </div>
-                <button class="save-measurements-btn" onclick="saveMeasurements()">
-                  <i class="fas fa-save"></i>
-                  <span>Save Measurements</span>
-                </button>
-                <div class="measurements-history">
-                  <h4>History</h4>
-                  <div id="measurements-chart"></div>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🏃 Conditioning</h3>
+                    <p style="color: var(--muted-text);">High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p>
                 </div>
-              </div>
             </div>
-          </div>
 
-          <!-- Exercise Library Tab -->
-          <div id="library-tab" class="tab-content">
-            <div class="library-container">
-              <h3>Exercise Library</h3>
-              <div class="library-search">
-                <input type="text" id="exercise-search" placeholder="Search exercises..." />
-                <i class="fas fa-search"></i>
-              </div>
-
-              <div class="library-filters">
-                <button class="filter-btn active" onclick="filterExercises('all')">All</button>
-                <button class="filter-btn" onclick="filterExercises('chest')">Chest</button>
-                <button class="filter-btn" onclick="filterExercises('back')">Back</button>
-                <button class="filter-btn" onclick="filterExercises('shoulders')">Shoulders</button>
-                <button class="filter-btn" onclick="filterExercises('arms')">Arms</button>
-                <button class="filter-btn" onclick="filterExercises('legs')">Legs</button>
-                <button class="filter-btn" onclick="filterExercises('core')">Core</button>
-              </div>
-
-              <div class="exercises-grid" id="exercises-grid"></div>
+            <div class="work-card" style="margin-top: 3rem; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); color: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3 style="color: white; margin-bottom: 1rem;">My Fitness Philosophy</h3>
+                <p style="color: white;">Consistency, persistence, and constantly challenging yourself are the only ways to grow. The skills gained from training at the gym translate directly to playing sports, studying, working—really everything in life. It's okay to be scared, but it's not okay to stay scared. Every rep, every round, every challenge is an opportunity to prove that you're stronger than your excuses.</p>
             </div>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Calorie Section (Placeholder) -->
-      <div id="calorie-section" class="calorie-section" style="display: none;">
-        <div class="section-header">
-          <button class="back-btn" onclick="backToMainSelection()">
-            <i class="fas fa-arrow-left"></i>
-            <span>Back</span>
-          </button>
-          <h1>Calorie Tracker</h1>
-        </div>
-        <div class="coming-soon">
-          <i class="fas fa-utensils"></i>
-          <h2>Coming Soon!</h2>
-          <p>The calorie tracking feature is under development. Check back later!</p>
-        </div>
-      </div>
-    </div>
+    <!-- Work Experience -->
+    <section id="work">
+        <div class="section-content">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Undergraduate Technical Intern - Electrical Engineering | PNNL</h3>
+                        <p class="work-date">June 2024 - Present (Part-time during school year)</p>
+                        <p>Working with cutting-edge SensorFish technology, autonomous sensors that must survive extreme hydraulic forces while collecting critical fish passage data. My role spans the full engineering spectrum: precision soldering for reliable sensor-to-computer connections, executing rigorous calibration protocols to ensure measurement accuracy, assisting in building Python/Tkinter applications for data visualization, and analyzing the sensor data to characterize the harsh conditions fish experience (acceleration, pressure, rotation) in such dams. This position has taught me as well that impactful engineering requires both technical excellence and adaptability, especially when deploying systems in harsh conditions where reliability is non-negotiable.</p>
+                    </div>
+                </div>
 
-    <!-- Exercise Modal -->
-    <div id="exercise-modal" class="modal" style="display: none;">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>Add Exercise</h2>
-          <button class="close-modal" onclick="closeExerciseModal()">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="exercise-form">
-            <input type="text" id="exercise-name" placeholder="Exercise name" />
-            <div class="sets-container" id="sets-container"></div>
-            <button class="add-set-btn" onclick="addSet()">
-              <i class="fas fa-plus"></i>
-              <span>Add Set</span>
-            </button>
-            <button class="save-exercise-btn" onclick="saveExercise()">
-              <i class="fas fa-check"></i>
-              <span>Save Exercise</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Christmas Light Technician & Window Cleaner | Radiant LLC</h3>
+                        <p class="work-date">November 2023 - February 2024 (4 months)</p>
+                        <p>More than simply seasonal work, this role demanded creativity, project management, and leadership. I assisted and followed customers' custom design orders for holiday lighting installations, managing everything from initial concept to final implementation. On top of the lights themselves, I practiced strict adherence to safety protocols for elevated work, and training/mentoring new team members in both technical skills and customer interaction. The experience taught me valuable lessons about project management, client relations, and the importance of attention to detail.</p>
+                    </div>
+                </div>
 
-  <!-- JavaScript Module -->
-  <script type="module" src="app.js"></script>
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>High Performance Computing Intern | PNNL</h3>
+                        <p class="work-date">June 2023 - August 2023 (3 months)</p>
+                        <p>Selected for a competitive High Performance Computing internship, I conducted comparative analysis between LNS and traditional Floating Point architectures, exploring how next-generation AI systems could achieve dramatic efficiency gains. Through collaborative research, involving PyTorch implementations and dynamic data format exploration, I co-authored a conference paper published at MICRO 2024, one of the premier venues for computer architecture research. This internship showed me how innovative problem-solving can revolutionize AI capabilities, directly impacting systems like ChatGPT and other transformative technologies.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Crew Member | McDonald's</h3>
+                        <p class="work-date">November 2022 - June 2023 (8 months)</p>
+                        <p>In my first professional role, I learned the fundamentals of operational excellence and customer service. Handling high-volume orders during peak hours all while maintaining accuracy and positive customer interactions, including serving Spanish-speaking customers in their preferred language. I proactively took on training responsibilities, helping new employees develop the skills needed in fast-paced situations. This experience built my professional foundation: working under pressure, collaborating with diverse teams, and understanding that excellence comes from consistency and attention to detail, regardless of the task.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-content">
+            <h2 class="section-title">Certifications & Skills</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="work-card" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">✅ Current Certifications</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;">📋 Microsoft Office Specialist 2019 (Word, Excel, PowerPoint, Outlook)</li>
+                    </ul>
+                </div>
+                
+                <div class="work-card" style="background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">🎯 In Progress / Planned</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;">💪 NASM (National Academy of Sports Medicine) Certification</li>
+                        <li style="padding: 0.5rem 0; color: white;">🚑 CPR/First Aid Certification</li>
+                        <li style="padding: 0.5rem 0; color: white;">⚡ AED (Automated External Defibrillator)</li>
+                    </ul>
+                </div>
+                
+                <div class="work-card" style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">💻 Technical Skills</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Programming:</strong> Java, Python (Tkinter GUI development)</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Hardware:</strong> Precision Soldering, Circuit Integration, Equipment Calibration</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Research Tools:</strong> SensorFish Technology, HBET, ROV Systems, Data Acquisition Systems</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Specializations:</strong> AI/ML (LLMs, LNS), Environmental Sensor Data Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-content">
+            <h2 class="section-title">My Portfolio</h2>
+            
+            <!-- Featured Projects Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                
+                <!-- PenguinBudget Project -->
+                <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;" 
+                     onmouseover="this.style.transform='scale(1.05)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                    <div style="padding: 2rem; color: #1a1a1a;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem;">🐧</span>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">PenguinBudget</h3>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500;">Smart Personal Finance Tracker</p>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">A modern, intuitive budgeting application designed to help users track income, expenses, and financial goals with real-time analytics and beautiful visualizations.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">HTML/CSS</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Financial Analytics</span>
+                        </div>
+                        <a href="https://budgeting-3mi.pages.dev" target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                           onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                            View Live Project 
+                            <span style="font-size: 1.2rem;">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GymTracker Pro (Open Beta) -->
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'">
+                  <div style="padding: 2rem; color: white;">
+                    <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+                        <img src="turtle-mascot.png" alt="GymTracker Pro Mascot" style="width:2.5rem; height:2.5rem; object-fit:contain;">
+                      <h3 style="font-size:1.8rem; font-weight:700; margin:0; display:flex; align-items:center; gap:8px;">
+                        GymTracker Pro <span class="beta-label">BETA</span>
+                      </h3>
+                    </div>
+                    <p style="margin-bottom:1.5rem; font-size:1.1rem; font-weight:500; opacity:0.95;">All‑in‑One Fitness & Nutrition Companion</p>
+                    <p style="margin-bottom:2rem; opacity:0.9;">Track workouts, PRs, measurements, progress photos, and calories in one app. This is an early development build — features may change and data may reset during updates.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">JavaScript</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">HTML</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">CSS</span>
+                    </div>
+                    <a href="https://gymtracker-pro.pages.dev/" target="_blank"
+                       style="display:inline-flex; align-items:center; gap:0.5rem; background: rgba(0,0,0,0.3); color:white; padding:0.8rem 1.5rem; border-radius:10px; text-decoration:none; font-weight:600; transition: all 0.3s;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                       onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                      Open Beta <span style="font-size:1.2rem;">→</span>
+                    </a>
+                    <div style="margin-top:0.75rem; font-size:0.9rem; opacity:0.8;">Status: Early Development (features shipping fast)</div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- More Projects Section -->
+            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--electric-purple)); opacity: 0.1; border-radius: 50%;"></div>
+                
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">More Projects Coming Soon</h3>
+                <p style="color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Currently working on web applications and personal side projects for friends. Always building something new and helping others bring their ideas to life! 😊
+                </p>
+                
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3+</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Projects in Progress</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--secondary), var(--electric-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Happy Clients/Friends</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Always Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" style="background: var(--dark-section);">
+        <div class="section-content">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="publication-box" style="background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);">
+                <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
+                <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
+                <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
+                <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
+                <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank" style="color: white; text-decoration: underline; font-weight: 500;">View Publication →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h2 class="section-title" style="color: white;">Let's Connect!</h2>
+            <p style="color: var(--muted-text);">Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
+            
+            <div class="contact-links">
+                <a href="mailto:andrew.gui2006@gmail.com">📧 Email</a>
+                <a href="https://www.linkedin.com/in/andrew-gui-32a386280/" target="_blank">💼 LinkedIn</a>
+                <a href="https://www.instagram.com/gwrfxj" target="_blank">📷 Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JS -->
+    <script src="app.js"></script>
 </body>
 </html>
