@@ -58,6 +58,7 @@
     }
 
     body {
+  margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
         background: var(--gradient-dark);
         color: var(--primary-white);
@@ -1668,6 +1669,7 @@
     }
 
     .modal-body {
+  margin: 0;
         padding: 20px;
     }
 
@@ -2187,7 +2189,8 @@
 }
 
 /* === PROGRESS TAB MOBILE TUNING === */
-html, body { overflow-x: hidden; }
+html, body {
+  margin: 0; overflow-x: hidden; }
 
 @media (max-width: 600px){
   .progress-container{ gap:16px; }
@@ -2231,3 +2234,38 @@ input[type=number]::-webkit-inner-spin-button{
   margin: 0;
 }
 input[type=number]{ -moz-appearance: textfield; }
+
+
+/* ==== Cross‑device modal + set row layout (finalized) ==== */
+.modal {
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom);
+}
+.modal .modal-content{
+  width: min(640px, 96vw);
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+/* Use the same grid everywhere sets are shown (modal + workout card) */
+.set-row{
+  display: grid !important;
+  grid-template-columns: 64px minmax(120px,1fr) minmax(120px,1fr) 48px;
+  gap: 10px;
+  align-items: center;
+}
+/* Inputs must shrink evenly and never overflow */
+.set-row .set-input,
+.set-row input[type="number"],
+.set-row input[type="text"]{
+  min-width: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px){
+  .modal .modal-content{ width: 96vw; }
+  .set-row{ grid-template-columns: 56px minmax(90px,1fr) minmax(90px,1fr) 44px; }
+}
+/* ==== End modal + set row layout ==== */
