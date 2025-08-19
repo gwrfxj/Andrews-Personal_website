@@ -18,31 +18,31 @@
         --off-white: #F9FAFB;
         --dark-blue: #1E3A8A;
         --light-blue: #3B82F6;
-        
+
         /* Accent Colors */
         --gold: #FFD700;
         --dark-gold: #B8860B;
         --silver: #C0C0C0;
-        
+
         /* Gradients */
         --gradient-fire: linear-gradient(135deg, #FF6B6B 0%, #DC2626 50%, #991B1B 100%);
         --gradient-ocean: linear-gradient(135deg, #667EEA 0%, #1E3A8A 100%);
         --gradient-rgb: linear-gradient(45deg, #FF006E, #8338EC, #3A86FF, #06FFB4, #FFBE0B, #FB5607);
         --gradient-dark: linear-gradient(180deg, #1A1A1A 0%, #0A0A0A 100%);
         --gradient-gold: linear-gradient(135deg, #FFD700 0%, #B8860B 100%);
-        
+
         /* Shadows */
         --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
         --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
         --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
         --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3);
         --shadow-glow: 0 0 30px rgba(220, 38, 38, 0.5);
-        
+
         /* Transitions */
         --transition-fast: 0.2s ease;
         --transition-normal: 0.3s ease;
         --transition-slow: 0.5s ease;
-        
+
         /* Border Radius */
         --radius-sm: 5px;
         --radius-md: 10px;
@@ -58,7 +58,7 @@
     }
 
     body {
-  margin: 0;
+        margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
         background: var(--gradient-dark);
         color: var(--primary-white);
@@ -110,8 +110,13 @@
     }
 
     @keyframes loadingProgress {
-        0% { width: 0%; }
-        100% { width: 100%; }
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
     }
 
     @keyframes fadeOut {
@@ -122,8 +127,15 @@
     }
 
     @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
     }
 
     /* ===============================================
@@ -141,9 +153,17 @@
     }
 
     @keyframes rgbShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     .auth-card {
@@ -197,8 +217,15 @@
     }
 
     @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-30px) rotate(10deg); }
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-30px) rotate(10deg);
+        }
     }
 
     .auth-logo {
@@ -230,13 +257,25 @@
     }
 
     @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
     }
 
     @keyframes flex {
-        0% { transform: translate(-50%, -50%) scale(1); }
-        100% { transform: translate(-50%, -50%) scale(1.2); }
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
     }
 
     .app-title {
@@ -316,6 +355,7 @@
             opacity: 0;
             transform: translateY(10px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -896,8 +936,13 @@
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
     }
 
     /* ===============================================
@@ -964,8 +1009,15 @@
     }
 
     @keyframes glow {
-        0%, 100% { filter: brightness(1); }
-        50% { filter: brightness(1.3) drop-shadow(0 0 10px rgba(220, 38, 38, 0.8)); }
+
+        0%,
+        100% {
+            filter: brightness(1);
+        }
+
+        50% {
+            filter: brightness(1.3) drop-shadow(0 0 10px rgba(220, 38, 38, 0.8));
+        }
     }
 
     .view-label {
@@ -1636,6 +1688,7 @@
             transform: translateY(-50px);
             opacity: 0;
         }
+
         to {
             transform: translateY(0);
             opacity: 1;
@@ -1669,7 +1722,7 @@
     }
 
     .modal-body {
-  margin: 0;
+        margin: 0;
         padding: 20px;
     }
 
@@ -1837,50 +1890,50 @@
             gap: 15px;
             text-align: center;
         }
-        
+
         .header-center {
             order: -1;
         }
-        
+
         #welcome-message {
             font-size: 16px;
         }
-        
+
         .selection-title {
             font-size: 28px;
         }
-        
+
         .selection-cards {
             grid-template-columns: 1fr;
         }
-        
+
         .workout-header {
             flex-direction: column;
             gap: 15px;
             text-align: center;
         }
-        
+
         .workout-title h1 {
             font-size: 24px;
         }
-        
+
         .body-graph {
             flex-direction: column;
             align-items: center;
         }
-        
+
         .muscle-categories {
             grid-template-columns: 1fr;
         }
-        
+
         .set-row {
             grid-template-columns: 40px 1fr 1fr 60px;
         }
-        
+
         .measurements-grid {
             grid-template-columns: repeat(2, 1fr);
         }
-        
+
         .exercises-grid {
             grid-template-columns: 1fr;
         }
@@ -1890,33 +1943,33 @@
         .auth-card {
             padding: 30px 20px;
         }
-        
+
         .app-title {
             font-size: 24px;
         }
-        
+
         .selection-cards {
             gap: 20px;
         }
-        
+
         .selection-card {
             min-height: 300px;
             padding: 30px 20px;
         }
-        
+
         .quick-stats {
             grid-template-columns: 1fr;
         }
-        
+
         .workout-tabs {
             flex-wrap: wrap;
         }
-        
+
         .workout-tab {
             flex: 1 1 calc(50% - 5px);
             min-width: calc(50% - 5px);
         }
-        
+
         .body-svg {
             width: 150px;
             height: 300px;
@@ -1962,6 +2015,7 @@
             opacity: 0;
             transform: translateX(-50px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
@@ -1973,6 +2027,7 @@
             opacity: 0;
             transform: translateX(50px);
         }
+
         to {
             opacity: 1;
             transform: translateX(0);
@@ -1984,6 +2039,7 @@
             opacity: 0;
             transform: translateY(50px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -1991,9 +2047,19 @@
     }
 
     @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        75% { transform: translateX(5px); }
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-5px);
+        }
+
+        75% {
+            transform: translateX(5px);
+        }
     }
 
     /* Loading animations */
@@ -2010,8 +2076,13 @@
     }
 
     @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     /* ===============================================
@@ -2043,261 +2114,635 @@
     }
 
     /* Container for progress photos */
-#progress-photos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* spacing between photos */
-  margin-top: 15px;
-}
+    #progress-photos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        /* spacing between photos */
+        margin-top: 15px;
+    }
 
-/* Each photo */
-#progress-photos img {
-  max-width: 150px;   /* make them smaller */
-  max-height: 150px;
-  object-fit: cover;  /* crop nicely instead of stretching */
-  border-radius: 8px; /* optional: rounded corners */
-  border: 2px solid #444;
-}
+    /* Each photo */
+    #progress-photos img {
+        max-width: 150px;
+        /* make them smaller */
+        max-height: 150px;
+        object-fit: cover;
+        /* crop nicely instead of stretching */
+        border-radius: 8px;
+        /* optional: rounded corners */
+        border: 2px solid #444;
+    }
 
-/* Inline note next to Photo Progress title */
-.photo-cap {
-  font-size: 0.85rem;
-  color: #9aa3ad; /* subtle gray */
-  margin-left: 8px;
-  font-weight: 400;
-}
+    /* Inline note next to Photo Progress title */
+    .photo-cap {
+        font-size: 0.85rem;
+        color: #9aa3ad;
+        /* subtle gray */
+        margin-left: 8px;
+        font-weight: 400;
+    }
 
-/* ============================
+    /* ============================
    Progress Tab (Charts + Photos)
    ============================ */
-.progress-inner {
-  padding: 1rem;
-}
+    .progress-inner {
+        padding: 1rem;
+    }
 
-.progress-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
+    .progress-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
 
-.progress-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+    .progress-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
 
-.progress-actions .auth-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.8rem;
-}
+    .progress-actions .auth-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 0.8rem;
+    }
 
-.photo-note {
-  font-size: 0.8rem;
-  color: #aaa;
-}
+    .photo-note {
+        font-size: 0.8rem;
+        color: #aaa;
+    }
 
-/* Charts wrapper */
-.charts-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
+    /* Charts wrapper */
+    .charts-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
 
-.charts-wrap canvas {
-  width: 100% !important;
-  background: #1a1a1a;
-  border-radius: 8px;
-  padding: 0.5rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-}
+    .charts-wrap canvas {
+        width: 100% !important;
+        background: #1a1a1a;
+        border-radius: 8px;
+        padding: 0.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    }
 
-/* ============================
+    /* ============================
    Photo Grid
    ============================ */
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 0.75rem;
-}
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
 
-.photo-card {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #222;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-}
+    .photo-card {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #222;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
 
-.photo-card.uploading .photo-thumb {
-  filter: grayscale(1) brightness(0.6);
-}
+    .photo-card.uploading .photo-thumb {
+        filter: grayscale(1) brightness(0.6);
+    }
 
-.photo-thumb {
-  width: 100%;
-  padding-top: 100%; /* square */
-  background-size: cover;
-  background-position: center;
-}
+    .photo-thumb {
+        width: 100%;
+        padding-top: 100%;
+        /* square */
+        background-size: cover;
+        background-position: center;
+    }
 
-.photo-meta {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #ccc;
-}
+    .photo-meta {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ccc;
+    }
 
-.photo-meta .date {
-  font-size: 0.75rem;
-  color: #888;
-}
+    .photo-meta .date {
+        font-size: 0.75rem;
+        color: #888;
+    }
 
-.photo-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
+    .photo-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
 
-.photo-actions a {
-  font-size: 0.75rem;
-  color: #4da6ff;
-  text-decoration: none;
-}
+    .photo-actions a {
+        font-size: 0.75rem;
+        color: #4da6ff;
+        text-decoration: none;
+    }
 
-.photo-actions a:hover {
-  text-decoration: underline;
-}
+    .photo-actions a:hover {
+        text-decoration: underline;
+    }
 
-.photo-actions .auth-btn {
-  background: none;
-  border: none;
-  padding: 0.25rem;
-  color: #f55;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
+    .photo-actions .auth-btn {
+        background: none;
+        border: none;
+        padding: 0.25rem;
+        color: #f55;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
 
-.photo-actions .auth-btn:hover {
-  color: #ff7777;
-}
+    .photo-actions .auth-btn:hover {
+        color: #ff7777;
+    }
 
-/* === PROGRESS TAB MOBILE TUNING === */
-html, body {
-  margin: 0; overflow-x: hidden; }
+    /* === PROGRESS TAB MOBILE TUNING === */
+    html,
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
 
-@media (max-width: 600px){
-  .progress-container{ gap:16px; }
-  .prs-section, .photo-progress, .measurements-section, .weight-section{ padding:16px; }
-  .prs-list{ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-  .pr-value{ font-size:20px; }
-  .photo-grid{ grid-template-columns: repeat(2, 1fr); gap:10px; }
-  .photo-item{ border-radius:12px; }
-  .measurements-grid{ grid-template-columns: 1fr; gap:10px; }
-  .measurements-section h3, .photo-progress h3, .prs-section h3{ font-size:1.1rem; }
-  .measurements-history h4{ font-size:1rem; }
-  /* Weight chart + controls */
-  .weight-range-buttons{ display:flex; flex-wrap:wrap; gap:8px; }
-  .weight-range-buttons .weight-range-btn{ flex:1; min-width:calc(50% - 8px); }
-  #weight-chart, #measurements-chart, .charts-wrap canvas { max-width:100%; }
-  .charts-wrap canvas, .weight-section canvas{ height:220px !important; }
-}
+    @media (max-width: 600px) {
+        .progress-container {
+            gap: 16px;
+        }
 
-/* Very small phones */
-@media (max-width: 375px){
-  .prs-list{ grid-template-columns: 1fr; }
-  .photo-grid{ grid-template-columns: 1fr 1fr; }
-}
-/* === END PROGRESS TAB MOBILE TUNING === */
+        .prs-section,
+        .photo-progress,
+        .measurements-section,
+        .weight-section {
+            padding: 16px;
+        }
+
+        .prs-list {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        .pr-value {
+            font-size: 20px;
+        }
+
+        .photo-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .photo-item {
+            border-radius: 12px;
+        }
+
+        .measurements-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .measurements-section h3,
+        .photo-progress h3,
+        .prs-section h3 {
+            font-size: 1.1rem;
+        }
+
+        .measurements-history h4 {
+            font-size: 1rem;
+        }
+
+        /* Weight chart + controls */
+        .weight-range-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .weight-range-buttons .weight-range-btn {
+            flex: 1;
+            min-width: calc(50% - 8px);
+        }
+
+        #weight-chart,
+        #measurements-chart,
+        .charts-wrap canvas {
+            max-width: 100%;
+        }
+
+        .charts-wrap canvas,
+        .weight-section canvas {
+            height: 220px !important;
+        }
+    }
+
+    /* Very small phones */
+    @media (max-width: 375px) {
+        .prs-list {
+            grid-template-columns: 1fr;
+        }
+
+        .photo-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /* === END PROGRESS TAB MOBILE TUNING === */
 
 
-/* === Compact set inputs on desktop & normalize number fields === */
-@media (min-width: 768px){
-  .set-row{
-    grid-template-columns: 72px minmax(130px, 180px) minmax(130px, 180px) 52px;
-    column-gap: 12px;
-  }
-  .set-input{
-    max-width: 180px;   /* keep Weight & Reps from overfilling */
-  }
-}
-/* remove number spinners for consistent widths */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button{
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number]{ -moz-appearance: textfield; }
+    /* === Compact set inputs on desktop & normalize number fields === */
+    @media (min-width: 768px) {
+        .set-row {
+            grid-template-columns: 72px minmax(130px, 180px) minmax(130px, 180px) 52px;
+            column-gap: 12px;
+        }
+
+        .set-input {
+            max-width: 180px;
+            /* keep Weight & Reps from overfilling */
+        }
+    }
+
+    /* remove number spinners for consistent widths */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
 
 
-/* ==== Cross‑device modal + set row layout (finalized) ==== */
-.modal {
-  align-items: center;
-  justify-content: center;
-  padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom);
-}
-.modal .modal-content{
-  width: min(640px, 96vw);
-  max-height: 88vh;
-  overflow-y: auto;
-}
+    /* ==== Cross‑device modal + set row layout (finalized) ==== */
+    .modal {
+        align-items: center;
+        justify-content: center;
+        padding: env(safe-area-inset-top) 12px env(safe-area-inset-bottom);
+    }
 
-/* Use the same grid everywhere sets are shown (modal + workout card) */
-.set-row{
-  display: grid !important;
-  grid-template-columns: 64px minmax(120px,1fr) minmax(120px,1fr) 48px;
-  gap: 10px;
-  align-items: center;
-}
-/* Inputs must shrink evenly and never overflow */
-.set-row .set-input,
-.set-row input[type="number"],
-.set-row input[type="text"]{
-  min-width: 0 !important;
-  width: 100% !important;
-  box-sizing: border-box;
-}
+    .modal .modal-content {
+        width: min(640px, 96vw);
+        max-height: 88vh;
+        overflow-y: auto;
+    }
 
-@media (max-width: 600px){
-  .modal .modal-content{ width: 96vw; }
-  .set-row{ grid-template-columns: 56px minmax(90px,1fr) minmax(90px,1fr) 44px; }
-}
-/* ==== End modal + set row layout ==== */
+    /* Use the same grid everywhere sets are shown (modal + workout card) */
+    .set-row {
+        display: grid !important;
+        grid-template-columns: 64px minmax(120px, 1fr) minmax(120px, 1fr) 48px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Inputs must shrink evenly and never overflow */
+    .set-row .set-input,
+    .set-row input[type="number"],
+    .set-row input[type="text"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 600px) {
+        .modal .modal-content {
+            width: 96vw;
+        }
+
+        .set-row {
+            grid-template-columns: 56px minmax(90px, 1fr) minmax(90px, 1fr) 44px;
+        }
+    }
+
+    /* ==== End modal + set row layout ==== */
 
 
-/* ===== Absolute clamp for set rows (prevents overflow anywhere) ===== */
-.active-workout .set-row{ 
-  display:grid !important;
-  grid-template-columns: 56px minmax(80px,1fr) minmax(80px,1fr) 44px !important;
-  gap:8px;
-}
-.modal .set-row{
-  display:grid !important;
-  grid-template-columns: 52px minmax(72px,1fr) minmax(72px,1fr) 40px !important;
-  gap:8px;
-}
+    /* ===== Absolute clamp for set rows (prevents overflow anywhere) ===== */
+    .active-workout .set-row {
+        display: grid !important;
+        grid-template-columns: 56px minmax(80px, 1fr) minmax(80px, 1fr) 44px !important;
+        gap: 8px;
+    }
 
-@media (min-width: 768px){
-  .active-workout .set-row{ grid-template-columns: 64px 140px 140px 48px !important; gap:10px; }
-}
-@media (min-width: 1200px){
-  .active-workout .set-row{ grid-template-columns: 64px 160px 160px 48px !important; }
-}
+    .modal .set-row {
+        display: grid !important;
+        grid-template-columns: 52px minmax(72px, 1fr) minmax(72px, 1fr) 40px !important;
+        gap: 8px;
+    }
 
-/* inputs: compact */
-.active-workout .set-row .set-input,
-.modal .set-row .set-input,
-.active-workout .set-row input[type="number"],
-.modal .set-row input[type="number"]{
-  min-width:0 !important;
-  width:100% !important;
-  padding:10px 12px;
-  box-sizing:border-box;
-}
-/* ===== End clamp ===== */
+    @media (min-width: 768px) {
+        .active-workout .set-row {
+            grid-template-columns: 64px 140px 140px 48px !important;
+            gap: 10px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .active-workout .set-row {
+            grid-template-columns: 64px 160px 160px 48px !important;
+        }
+    }
+
+    /* inputs: compact */
+    .active-workout .set-row .set-input,
+    .modal .set-row .set-input,
+    .active-workout .set-row input[type="number"],
+    .modal .set-row input[type="number"] {
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 10px 12px;
+        box-sizing: border-box;
+    }
+
+    /* ===== End clamp ===== */
+
+    /* 
+MOBILE UI FIXES - Add to the end of your styles.css file
+*/
+
+    /* ===============================================
+   CRITICAL MOBILE FIXES
+   =============================================== */
+
+    /* Fix Progress Tab Mobile Layout */
+    @media (max-width: 768px) {
+        .progress-container {
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .prs-section,
+        .photo-progress,
+        .measurements-section {
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .prs-list {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .pr-item {
+            padding: 12px;
+        }
+
+        .pr-value {
+            font-size: 20px;
+        }
+
+        .photo-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .measurements-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .measurement-item input {
+            font-size: 14px;
+            padding: 8px;
+        }
+    }
+
+    /* Fix Add Exercise Modal Set Row Layout */
+    .modal .sets-container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .modal .set-row {
+        display: grid !important;
+        grid-template-columns: 50px 1fr 1fr 50px !important;
+        gap: 8px !important;
+        align-items: center;
+        padding: 5px 0;
+        max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .modal .set-row {
+            grid-template-columns: 45px 1fr 1fr 45px !important;
+            gap: 6px !important;
+        }
+
+        .modal .set-row .set-number {
+            font-size: 12px;
+            padding: 4px;
+        }
+    }
+
+    .modal .set-row input {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        padding: 8px 6px !important;
+        font-size: 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .modal .set-row .set-input {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 8px 6px !important;
+        font-size: 14px !important;
+    }
+
+    .modal .set-row .set-complete {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 6px !important;
+        font-size: 16px !important;
+    }
+
+    /* Modal Content Mobile Optimization */
+    @media (max-width: 600px) {
+        .modal {
+            padding: 10px;
+        }
+
+        .modal-content {
+            width: 95vw !important;
+            max-width: 95vw !important;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .modal-header {
+            padding: 15px;
+        }
+
+        .modal-header h2 {
+            font-size: 20px;
+        }
+
+        .modal-body {
+            padding: 15px;
+        }
+
+        .exercise-form {
+            gap: 15px;
+        }
+    }
+
+    /* Fix Workout Section Mobile Layout */
+    @media (max-width: 768px) {
+        .workout-section {
+            padding: 0;
+        }
+
+        .workout-content {
+            padding: 15px;
+        }
+
+        .active-workout {
+            padding: 20px 15px;
+        }
+
+        .active-workout .set-row {
+            grid-template-columns: 45px 1fr 1fr 50px !important;
+            gap: 6px !important;
+        }
+
+        .active-workout .set-row input {
+            padding: 8px 6px !important;
+            font-size: 14px !important;
+        }
+    }
+
+    /* Fix Progress Tab Specific Issues */
+    @media (max-width: 600px) {
+        #progress-tab {
+            padding: 0;
+        }
+
+        .progress-container>* {
+            margin: 0 0 15px 0;
+        }
+
+        .prs-section h3,
+        .photo-progress h3,
+        .measurements-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Fix PR Cards */
+        .pr-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+        }
+
+        .pr-exercise {
+            flex: 1;
+            text-align: left;
+        }
+
+        .pr-value {
+            flex: 0 0 auto;
+            margin: 0 10px;
+        }
+
+        .pr-date {
+            flex: 0 0 auto;
+            font-size: 11px;
+        }
+
+        /* Fix Photo Progress */
+        #progress-photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        #progress-photos img,
+        .progress-photo {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 8px;
+            max-width: none;
+            max-height: none;
+        }
+
+        /* Fix Buttons */
+        .add-pr-btn,
+        .add-photo-btn,
+        .save-measurements-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+        }
+
+        /* Fix Measurements */
+        .measurements-history {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        #measurements-chart {
+            min-height: 150px;
+            font-size: 14px;
+            padding: 15px;
+        }
+    }
+
+    /* Ensure no horizontal scroll */
+    body,
+    html {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    .main-dashboard,
+    .workout-section {
+        overflow-x: hidden !important;
+    }
+
+    /* Fix Tab Content Overflow */
+    .tab-content {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    .tab-content.active {
+        padding: 0 !important;
+    }
+
+    /* Additional Small Phone Fixes */
+    @media (max-width: 375px) {
+        .modal .set-row {
+            grid-template-columns: 40px 1fr 1fr 40px !important;
+            gap: 4px !important;
+        }
+
+        .modal .set-row input {
+            font-size: 13px !important;
+            padding: 6px 4px !important;
+        }
+
+        .pr-item {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .pr-value {
+            margin: 8px 0;
+        }
+
+        #progress-photos {
+            grid-template-columns: 1fr;
+        }
+    }
