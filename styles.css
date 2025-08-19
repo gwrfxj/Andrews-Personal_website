@@ -2269,3 +2269,35 @@ input[type=number]{ -moz-appearance: textfield; }
   .set-row{ grid-template-columns: 56px minmax(90px,1fr) minmax(90px,1fr) 44px; }
 }
 /* ==== End modal + set row layout ==== */
+
+
+/* ===== Absolute clamp for set rows (prevents overflow anywhere) ===== */
+.active-workout .set-row{ 
+  display:grid !important;
+  grid-template-columns: 56px minmax(80px,1fr) minmax(80px,1fr) 44px !important;
+  gap:8px;
+}
+.modal .set-row{
+  display:grid !important;
+  grid-template-columns: 52px minmax(72px,1fr) minmax(72px,1fr) 40px !important;
+  gap:8px;
+}
+
+@media (min-width: 768px){
+  .active-workout .set-row{ grid-template-columns: 64px 140px 140px 48px !important; gap:10px; }
+}
+@media (min-width: 1200px){
+  .active-workout .set-row{ grid-template-columns: 64px 160px 160px 48px !important; }
+}
+
+/* inputs: compact */
+.active-workout .set-row .set-input,
+.modal .set-row .set-input,
+.active-workout .set-row input[type="number"],
+.modal .set-row input[type="number"]{
+  min-width:0 !important;
+  width:100% !important;
+  padding:10px 12px;
+  box-sizing:border-box;
+}
+/* ===== End clamp ===== */
