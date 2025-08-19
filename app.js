@@ -889,10 +889,12 @@ async function loadRoutines() {
 
 function displayRoutines() {
     const routinesList = document.getElementById('routines-list');
+    if (!routinesList) return;
     routinesList.innerHTML = '';
 
-    if (userRoutines.length === 0) {
-        routinesList.innerHTML = '<p style="color: rgba(255,255,255,0.5);">No routines yet. Create your first routine!</p>';
+    if (!Array.isArray(userRoutines) || userRoutines.length === 0) {
+        routinesList.innerHTML =
+            '<p style="color: rgba(255,255,255,0.5);">No routines yet. Create your first routine!</p>';
         return;
     }
 
@@ -900,14 +902,22 @@ function displayRoutines() {
         const routineItem = document.createElement('div');
         routineItem.className = 'routine-item';
         routineItem.innerHTML = `
-            <div class="routine-name">${routine.name}</div>
-            <div class="routine-exercises">${routine.exercises.length} exercises</div>
-        `;
+      <div class="routine-name">${routine.name}</div>
+      <div class="routine-exercises">${(routine.exercises || []).length} exercises</div>
+    `;
         routineItem.onclick = () => startRoutineWorkout(routine);
-
+        routineItem.setAttribute('data-routine-id', routine.id || '');
         routinesList.appendChild(routineItem);
     });
+
+    // after initial render, add edit/delete controls
+    try {
+        enhanceRoutineList();
+    } catch (e) {
+        console.warn('enhanceRoutineList() failed:', e);
+    }
 }
+
 
 function startRoutineWorkout(routine) {
     closeRoutinesModal();
@@ -959,12 +969,12 @@ window.addPR = async () => {
 
 async function loadPRs() {
     if (!currentUser) return;
-
     try {
         const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
         const prs = userDoc.data()?.stats?.personalRecords || {};
 
         const prsList = document.getElementById('prs-list');
+        if (!prsList) return;
         prsList.innerHTML = '';
 
         if (Object.keys(prs).length === 0) {
@@ -976,16 +986,23 @@ async function loadPRs() {
             const prItem = document.createElement('div');
             prItem.className = 'pr-item';
             prItem.innerHTML = `
-                <div class="pr-exercise">${exercise}</div>
-                <div class="pr-value">${record.weight} lbs × ${record.reps}</div>
-                <div class="pr-date">${record.date?.toDate ? record.date.toDate().toLocaleDateString() : 'Recent'}</div>
-            `;
+        <div class="pr-exercise">${exercise}</div>
+        <div class="pr-value">${record.weight} lbs × ${record.reps}</div>
+        <div class="pr-date">${record.date?.toDate ? record.date.toDate().toLocaleDateString() : 'Recent'}</div>
+        <div class="pr-actions">
+          <button class="pr-action-btn edit" title="Edit">✎</button>
+          <button class="pr-action-btn delete" title="Delete">✕</button>
+        </div>
+      `;
+            prItem.querySelector('.edit')?.addEventListener('click', () => editPR(exercise));
+            prItem.querySelector('.delete')?.addEventListener('click', () => deletePR(exercise));
             prsList.appendChild(prItem);
         });
     } catch (error) {
         console.error('Error loading PRs:', error);
     }
 }
+
 
 // Photo Progress
 window.addProgressPhoto = () => choosePhotoSource();
