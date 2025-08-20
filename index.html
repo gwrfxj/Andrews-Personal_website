@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Gui - Portfolio</title>
+    
+    <!-- Professional Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stem">Research</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" style="background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+        <div class="hero-content">
+            <h1>Andrew Gui</h1>
+            <p class="tagline">Electrical & Computer Engineering • Research • Innovation</p>
+            <div class="badges">
+                <span class="badge">⚡ Electrical and Computer Engineer</span>
+                <span class="badge">🔬 Research Intern</span>
+                <span class="badge">🥊 UW Boxing Team</span>
+                <span class="badge">🚤 Watersports Fanatic</span>
+                <span class="badge">💪 Fitness Enthusiast</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - COMPLETELY REDESIGNED -->
+    <section id="about">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-container">
+                <!-- Left: Image -->
+                <div class="about-image-wrapper">
+                    <img src="Profile.jpg" alt="Andrew Gui" class="about-image">
+                </div>
+                
+                <!-- Right: Text Content -->
+                <div class="about-text">
+                    <p>
+                        My journey in engineering stems from a simple childhood fascination: how does a collection of metal and plastic have the capability to call a friend halfway around the world? This curiosity has given me the drive to aggressively attempt to jumpstart my career and pursue hands-on experience. Shown from the fact I'd graduated as a valedictorian in high school a year early, and secured competitive internships at Pacific Northwest National Laboratory (PNNL). Currently, I work as an Undergraduate Technical Intern - Electrical Engineer at PNNL, where I calibrate and test SensorFish devices, autonomous sensors that withstand brutal dam turbine forces while collecting precise fish passage data, analyze the collected data to characterize fish passage conditions, and perform precision soldering to create custom electrical connections between the autonomous devices and computer systems. I've also co-authored research on optimizing Large Language Model hardware using Logarithmic Number Systems, exploring how computational efficiency can be revolutionized through hardware-software integration. Now pursuing Electrical and Computer Engineering at the University of Washington, I'm focused on building the skills to create major impacts on every project I touch.
+                    </p>
+                    
+                    <p>
+                        However, what sets me apart isn't just technical capability, it's my interdisciplinary mindset that innovation only happens when boundaries are broken and the impossible becomes possible in the real world. This philosophy extends far beyond STEM. Whether I'm finding the most energy-efficient combinations in boxing as part of UW's Boxing Team, developing the systematic approach that helped me lose 100 pounds in 8 months, I approach every challenge with creative problem-solving skills and unwavering determination. With that, engineering excites me because it's the art of making what seems impossible work under brutal, unforgiving conditions, and I understand that breakthrough results, whether in engineering or personal challenges, come from applying brains over brawn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEM/Research Section -->
+    <section id="stem">
+        <div class="section-content">
+            <h2 class="section-title">Research & STEM Journey</h2>
+            
+            <div class="research-card">
+                <h3>🔬 Current Research: SensorFish Technology at PNNL</h3>
+                <p>Working as an Undergraduate Technical Intern - Electrical Engineering, I analyze autonomous SensorFish and Mini SensorFish data to characterize fish passage conditions through dams. This involves extensive field testing, calibration, and precision soldering to create custom electrical connections between the autonomous devices and computer systems. I also develop Python/Tkinter GUI applications for data analysis and visualization, while researching equipment upgrades to modernize legacy data acquisition systems—effectively bridging hands-on hardware integration with modern computational analysis platforms.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python/Tkinter</span>
+                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">Hardware Testing</span>
+                    <span class="tech-badge">HBET</span>
+                    <span class="tech-badge">Precision Soldering</span>
+                    <span class="tech-badge">Circuit Integration</span>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <h3>💻 AI Hardware</h3>
+                <p>Co-authored research optimizing Large Language Models through Logarithmic Number System (LNS) implementations. Conducted comparative performance analysis of LNS vs. Floating Point architectures, contributing to next-generation AI hardware design and computational efficiency breakthroughs.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">LLMs</span>
+                    <span class="tech-badge">Architecture Codesign</span>
+                    <span class="tech-badge">Performance Optimization</span>
+                    <span class="tech-badge">Machine Learning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitness Section -->
+    <section id="fitness">
+        <div class="section-content">
+            <!-- Gym Progress Section -->
+            <h3 style="text-align: center; margin: 3rem 0 1rem; font-size: 1.8rem; color: var(--light-text);">
+                Fitness Journey 🏋️
+            </h3>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; color: #aaa; font-size: 1rem;">
+                Through sheer will and determination, I transformed my health and fitness — here's the journey so far.
+            </p>
+            
+            <div class="fitness-gallery">
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Beginning.jpg"
+                         alt="Beginning of fitness journey"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>The Beginning</h3>
+                        <p>2023 - Where it all started, being at 300 lbs.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/Mid-Journey.jpg"
+                         alt="Mid-point of fitness journey"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Building Momentum</h3>
+                        <p>2024 - Consistency paying off, seeing real changes and getting stronger</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/CurrentGymMe.jpg"
+                         alt="Current gym progress photo"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Current Status</h3>
+                        <p>2025 - Stronger than ever, fitness is now a lifestyle, not just a goal</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="fitness-card">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/ActionPhoto.jpg"
+                         alt="Daily workout grind action shot"
+                         style="border-radius: 15px; width: 100%; height: 350px; object-fit: cover; border: 3px solid var(--electric-purple);">
+                    <div class="fitness-card-content">
+                        <h3>Daily Grind</h3>
+                        <p>Every day is an opportunity to become better than yesterday</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Boxing Feature Section -->
+            <div style="background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%); color: white; padding: 3rem; border-radius: 20px; margin: 3rem 0; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">🥊 UW BOXING TEAM 🥊</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #fbbf24;">Pride. Poise. Team. Family.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingTeamPhoto.JPG"
+                         alt="Boxing team group photo"
+                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
+                    
+                    <img src="https://raw.githubusercontent.com/gwrfxj/my-portfolio/main/BoxingPhoto.JPG"
+                         alt="Personal boxing portrait"
+                         style="height: 300px; border-radius: 15px; border: 3px solid #fbbf24; object-fit: cover; width: 100%;">
+                </div>
+                <p style="margin-top: 2rem; font-size: 1.1rem;">As I grow and learn, I've realized boxing isn't just physical strength - it's about discipline, strategy, and mental toughness. These skills have directly translated to my academic and professional life, and I cannot thank my team leads, coaches, and peers enough. 💜💛</p>
+            </div>
+
+            <!-- Training Split Section -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🥊 Boxing Training</h3>
+                    <p style="color: var(--muted-text);">Technical sparring, footwork drills, heavy bag work, and conditioning. Representing UW with pride!</p>
+                </div>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">💪 Strength Training</h3>
+                    <p style="color: var(--muted-text);">Powerlifting fundamentals mixed with hypertrophy work. Building functional strength that transfers to the ring.</p>
+                </div>
+                <div class="work-card">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">🏃 Conditioning</h3>
+                    <p style="color: var(--muted-text);">High-intensity cardio, sprint work, and endurance training. Staying fight-ready year-round.</p>
+                </div>
+            </div>
+
+            <div class="work-card" style="margin-top: 3rem; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); color: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3 style="color: white; margin-bottom: 1rem;">My Fitness Philosophy</h3>
+                <p style="color: white;">Consistency, persistence, and constantly challenging yourself are the only ways to grow. The skills gained from training at the gym translate directly to playing sports, studying, working—really everything in life. It's okay to be scared, but it's not okay to stay scared. Every rep, every round, every challenge is an opportunity to prove that you're stronger than your excuses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="work">
+        <div class="section-content">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Undergraduate Technical Intern - Electrical Engineering | PNNL</h3>
+                        <p class="work-date">June 2024 - Present (Part-time during school year)</p>
+                        <p>Working with cutting-edge SensorFish technology, autonomous sensors that must survive extreme hydraulic forces while collecting critical fish passage data. My role spans the full engineering spectrum: precision soldering for reliable sensor-to-computer connections, executing rigorous calibration protocols to ensure measurement accuracy, assisting in building Python/Tkinter applications for data visualization, and analyzing the sensor data to characterize the harsh conditions fish experience (acceleration, pressure, rotation) in such dams. This position has taught me as well that impactful engineering requires both technical excellence and adaptability, especially when deploying systems in harsh conditions where reliability is non-negotiable.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Christmas Light Technician & Window Cleaner | Radiant LLC</h3>
+                        <p class="work-date">November 2023 - February 2024 (4 months)</p>
+                        <p>More than simply seasonal work, this role demanded creativity, project management, and leadership. I assisted and followed customers' custom design orders for holiday lighting installations, managing everything from initial concept to final implementation. On top of the lights themselves, I practiced strict adherence to safety protocols for elevated work, and training/mentoring new team members in both technical skills and customer interaction. The experience taught me valuable lessons about project management, client relations, and the importance of attention to detail.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>High Performance Computing Intern | PNNL</h3>
+                        <p class="work-date">June 2023 - August 2023 (3 months)</p>
+                        <p>Selected for a competitive High Performance Computing internship, I conducted comparative analysis between LNS and traditional Floating Point architectures, exploring how next-generation AI systems could achieve dramatic efficiency gains. Through collaborative research, involving PyTorch implementations and dynamic data format exploration, I co-authored a conference paper published at MICRO 2024, one of the premier venues for computer architecture research. This internship showed me how innovative problem-solving can revolutionize AI capabilities, directly impacting systems like ChatGPT and other transformative technologies.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="work-card">
+                        <h3>Crew Member | McDonald's</h3>
+                        <p class="work-date">November 2022 - June 2023 (8 months)</p>
+                        <p>In my first professional role, I learned the fundamentals of operational excellence and customer service. Handling high-volume orders during peak hours all while maintaining accuracy and positive customer interactions, including serving Spanish-speaking customers in their preferred language. I proactively took on training responsibilities, helping new employees develop the skills needed in fast-paced situations. This experience built my professional foundation: working under pressure, collaborating with diverse teams, and understanding that excellence comes from consistency and attention to detail, regardless of the task.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-content">
+            <h2 class="section-title">Certifications & Skills</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="work-card" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">✅ Current Certifications</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;">📋 Microsoft Office Specialist 2019 (Word, Excel, PowerPoint, Outlook)</li>
+                    </ul>
+                </div>
+                
+                <div class="work-card" style="background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">🎯 In Progress / Planned</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;">💪 NASM (National Academy of Sports Medicine) Certification</li>
+                        <li style="padding: 0.5rem 0; color: white;">🚑 CPR/First Aid Certification</li>
+                        <li style="padding: 0.5rem 0; color: white;">⚡ AED (Automated External Defibrillator)</li>
+                    </ul>
+                </div>
+                
+                <div class="work-card" style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: white;">💻 Technical Skills</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Programming:</strong> Java, Python (Tkinter GUI development)</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Hardware:</strong> Precision Soldering, Circuit Integration, Equipment Calibration</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Research Tools:</strong> SensorFish Technology, HBET, ROV Systems, Data Acquisition Systems</li>
+                        <li style="padding: 0.5rem 0; color: white;"><strong>Specializations:</strong> AI/ML (LLMs, LNS), Environmental Sensor Data Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-content">
+            <h2 class="section-title">My Portfolio</h2>
+            
+            <!-- Featured Projects Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                
+                <!-- PenguinBudget Project -->
+                <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;" 
+                     onmouseover="this.style.transform='scale(1.05)'" 
+                     onmouseout="this.style.transform='scale(1)'">
+                    <div style="padding: 2rem; color: #1a1a1a;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="font-size: 2.5rem;">🐧</span>
+                            <h3 style="font-size: 1.8rem; font-weight: 700; margin: 0;">PenguinBudget</h3>
+                        </div>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem; font-weight: 500;">Smart Personal Finance Tracker</p>
+                        <p style="margin-bottom: 2rem; opacity: 0.9;">A modern, intuitive budgeting application designed to help users track income, expenses, and financial goals with real-time analytics and beautiful visualizations.</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">HTML/CSS</span>
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Financial Analytics</span>
+                        </div>
+                        <a href="https://budgeting-3mi.pages.dev" target="_blank" 
+                           style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                           onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                            View Live Project 
+                            <span style="font-size: 1.2rem;">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GymTracker Pro (Open Beta) -->
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;"
+                     onmouseover="this.style.transform='scale(1.05)'"
+                     onmouseout="this.style.transform='scale(1)'">
+                  <div style="padding: 2rem; color: white;">
+                    <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+                        <img src="turtle-mascot.png" alt="GymTracker Pro Mascot" style="width:2.5rem; height:2.5rem; object-fit:contain;">
+                      <h3 style="font-size:1.8rem; font-weight:700; margin:0; display:flex; align-items:center; gap:8px;">
+                        GymTracker Pro <span class="beta-label">BETA</span>
+                      </h3>
+                    </div>
+                    <p style="margin-bottom:1.5rem; font-size:1.1rem; font-weight:500; opacity:0.95;">All‑in‑One Fitness & Nutrition Companion</p>
+                    <p style="margin-bottom:2rem; opacity:0.9;">Track workouts, PRs, measurements, progress photos, and calories in one app. This is an early development build — features may change and data may reset during updates.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">JavaScript</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">HTML</span>
+                      <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">CSS</span>
+                    </div>
+                    <a href="https://gymtracker-pro.pages.dev/" target="_blank"
+                       style="display:inline-flex; align-items:center; gap:0.5rem; background: rgba(0,0,0,0.3); color:white; padding:0.8rem 1.5rem; border-radius:10px; text-decoration:none; font-weight:600; transition: all 0.3s;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
+                       onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
+                      Open Beta <span style="font-size:1.2rem;">→</span>
+                    </a>
+                    <div style="margin-top:0.75rem; font-size:0.9rem; opacity:0.8;">Status: Early Development (features shipping fast)</div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- More Projects Section -->
+            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--electric-purple)); opacity: 0.1; border-radius: 50%;"></div>
+                
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">More Projects Coming Soon</h3>
+                <p style="color: var(--muted-text); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Currently working on web applications and personal side projects for friends. Always building something new and helping others bring their ideas to life! 😊
+                </p>
+                
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3+</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Projects in Progress</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--secondary), var(--electric-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Happy Clients/Friends</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
+                        <div style="color: var(--muted-text); font-size: 0.9rem;">Always Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" style="background: var(--dark-section);">
+        <div class="section-content">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="publication-box" style="background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);">
+                <h3>📚 Bridging the Gap Between LLMs and LNS with Dynamic Data Format and Architecture Codesign</h3>
+                <p style="margin: 1rem 0;"><strong>Authors:</strong> Haghi P., C. Wu, Z. Azad, Y. Li, <strong>A. Gui</strong>, Y. Hao, and A. Li, et al.</p>
+                <p style="margin: 1rem 0;"><strong>Published in:</strong> Proceedings of the 57th IEEE/ACM International Symposium on Microarchitecture (MICRO 2024)</p>
+                <p style="margin: 1rem 0;"><strong>Date:</strong> November 2-6, 2024, Austin, TX</p>
+                <p><a href="https://doi.org/10.1109/MICRO61859.2024.00118" target="_blank" style="color: white; text-decoration: underline; font-weight: 500;">View Publication →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h2 class="section-title" style="color: white;">Let's Connect!</h2>
+            <p style="color: var(--muted-text);">Whether it's about research, fitness, or just to chat - I'd love to hear from you!</p>
+            
+            <div class="contact-links">
+                <a href="mailto:andrew.gui2006@gmail.com">📧 Email</a>
+                <a href="https://www.linkedin.com/in/andrew-gui-32a386280/" target="_blank">💼 LinkedIn</a>
+                <a href="https://www.instagram.com/gwrfxj" target="_blank">📷 Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JS -->
+    <script src="app.js"></script>
+</body>
+</html>
