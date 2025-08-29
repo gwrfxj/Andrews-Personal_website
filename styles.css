@@ -479,3 +479,67 @@ section {
   padding: 2px 6px;
   border-radius: 6px;
 }
+
+/* Label used for released projects */
+.release-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #10b981; /* green text */
+    margin-left: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+/* Mobile navigation toggle styles */
+nav .nav-toggle {
+    display: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1001;
+}
+nav .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--light-text);
+    transition: 0.3s ease-in-out;
+}
+
+/* Transform hamburger into an “X” when nav is open */
+nav.open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+nav.open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+nav.open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Small‑screen menu styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    nav.open ul {
+        display: flex;
+    }
+    nav .nav-toggle {
+        display: block;
+    }
+}
