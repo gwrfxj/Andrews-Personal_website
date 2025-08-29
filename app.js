@@ -32,3 +32,16 @@ document.querySelectorAll('#portfolio > div > div').forEach(card => {
         observer.observe(card);
     }
 });
+// Mobile navigation toggle functionality
+// This adds an event listener to the hamburger icon so that on small screens
+// users can show or hide the navigation links. When the nav has the class
+// 'open', the CSS will display the menu; otherwise it remains hidden.
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navElement = document.querySelector('nav');
+    if (navToggle && navElement) {
+        navToggle.addEventListener('click', () => {
+            navElement.classList.toggle('open');
+        });
+    }
+});
