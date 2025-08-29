@@ -16,7 +16,13 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <ul>
+        <!-- Mobile toggle button. On small screens this will appear and allow users to open/close the navigation. -->
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navMenu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#stem">Research</a></li>
@@ -44,7 +50,7 @@
         </div>
     </section>
 
-    <!-- About Section - COMPLETELY REDESIGNED -->
+    <!-- About Section -->
     <section id="about">
         <div class="section-content">
             <h2 class="section-title">About Me</h2>
@@ -94,7 +100,7 @@
                     <span class="tech-badge">LLMs</span>
                     <span class="tech-badge">Architecture Codesign</span>
                     <span class="tech-badge">Performance Optimization</span>
-                    <span class="tech-badge">Machine Learning</span>
+                    <span the="tech-badge">Machine Learning</span>
                 </div>
             </div>
         </div>
@@ -103,7 +109,6 @@
     <!-- Fitness Section -->
     <section id="fitness">
         <div class="section-content">
-            <!-- Gym Progress Section -->
             <h3 style="text-align: center; margin: 3rem 0 1rem; font-size: 1.8rem; color: var(--light-text);">
                 Fitness Journey 🏋️
             </h3>
@@ -300,7 +305,8 @@
                         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem;">
                             <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
                             <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">HTML/CSS</span>
-                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Financial Analytics</span>
+                            <!-- Updated label: replaced 'Financial Analytics' with a friendlier term -->
+                            <span style="background: rgba(0, 0, 0, 0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; font-weight: 500;">Expense Tracking</span>
                         </div>
                         <a href="https://budgeting-3mi.pages.dev" target="_blank" 
                            style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0, 0, 0, 0.3); color: white; padding: 0.8rem 1.5rem; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s;"
@@ -312,7 +318,7 @@
                     </div>
                 </div>
 
-                <!-- GymTracker Pro (Open Beta) -->
+                <!-- GymTracker Pro (Released) -->
                 <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transform: scale(1); transition: all 0.3s; cursor: pointer;"
                      onmouseover="this.style.transform='scale(1.05)'"
                      onmouseout="this.style.transform='scale(1)'">
@@ -320,11 +326,11 @@
                     <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
                         <img src="turtle-mascot.png" alt="GymTracker Pro Mascot" style="width:2.5rem; height:2.5rem; object-fit:contain;">
                       <h3 style="font-size:1.8rem; font-weight:700; margin:0; display:flex; align-items:center; gap:8px;">
-                        GymTracker Pro <span class="beta-label">BETA</span>
+                        GymTracker Pro <span class="release-label">v1.0</span>
                       </h3>
                     </div>
                     <p style="margin-bottom:1.5rem; font-size:1.1rem; font-weight:500; opacity:0.95;">All‑in‑One Fitness & Nutrition Companion</p>
-                    <p style="margin-bottom:2rem; opacity:0.9;">Track workouts, PRs, measurements, progress photos, and calories in one app. This is an early development build — features may change and data may reset during updates.</p>
+                    <p style="margin-bottom:2rem; opacity:0.9;">Track workouts, PRs, measurements, progress photos, and calories in one app. The app is fully released and still in active development — expect regular improvements and feature updates.</p>
                     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
                       <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">JavaScript</span>
                       <span style="background: rgba(255,255,255,0.2); padding:0.3rem 0.8rem; border-radius:15px; font-size:0.85rem;">HTML</span>
@@ -334,15 +340,15 @@
                        style="display:inline-flex; align-items:center; gap:0.5rem; background: rgba(0,0,0,0.3); color:white; padding:0.8rem 1.5rem; border-radius:10px; text-decoration:none; font-weight:600; transition: all 0.3s;"
                        onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'"
                        onmouseout="this.style.background='rgba(0, 0, 0, 0.3)'">
-                      Open Beta <span style="font-size:1.2rem;">→</span>
+                      Launch App <span style="font-size:1.2rem;">→</span>
                     </a>
-                    <div style="margin-top:0.75rem; font-size:0.9rem; opacity:0.8;">Status: Early Development (features shipping fast)</div>
+                    <div style="margin-top:0.75rem; font-size:0.9rem; opacity:0.8;">Status: Released — Active development</div>
                   </div>
                 </div>
             </div>
 
             <!-- More Projects Section -->
-            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden;">
+            <div style="background: var(--dark-card); border-radius: 20px; padding: 3rem; text-align: center; border: 2px dashed var(--border-color); position: relative; overflow: hidden; min-height: 300px;">
                 <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); opacity: 0.1; border-radius: 50%;"></div>
                 <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--electric-purple)); opacity: 0.1; border-radius: 50%;"></div>
                 
@@ -355,14 +361,6 @@
                     <div style="text-align: center;">
                         <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">3+</div>
                         <div style="color: var(--muted-text); font-size: 0.9rem;">Projects in Progress</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--secondary), var(--electric-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">5</div>
-                        <div style="color: var(--muted-text); font-size: 0.9rem;">Happy Clients/Friends</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">∞</div>
-                        <div style="color: var(--muted-text); font-size: 0.9rem;">Always Learning</div>
                     </div>
                 </div>
             </div>
